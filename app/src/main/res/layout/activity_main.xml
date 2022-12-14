@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txTitulo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tituloMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/vermelhou"
+        android:textColor="@color/white"
+        android:text="@string/categoria_de_produtos"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rodape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/vermelhou"
+        android:text="@string/desenvolvido_por"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonMoveis"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="Moveis"
+        android:onClick="sendProdutos"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonTodos"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonMaterial"
+        tools:srcCompat="@drawable/btmoveis" />
+
+    <ImageButton
+        android:id="@+id/imageButtonFerramentas"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="Ferramentas"
+        android:onClick="sendProdutos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloMain"
+        tools:srcCompat="@drawable/btferramentas" />
+
+    <ImageButton
+        android:id="@+id/imageButtonTodos"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/categoria"
+        android:onClick="sendProdutos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonFerramentas"
+        tools:srcCompat="@drawable/bttudo" />
+
+    <ImageButton
+        android:id="@+id/imageButtonMaterial"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="Material"
+        android:onClick="sendProdutos"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonFerramentas"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloMain"
+        tools:srcCompat="@drawable/btmaterial" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/material_de_construcao"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloMain" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/ferramentas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloMain" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/m_veis_e_decora_o"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.303"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonMoveis" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/todos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonTodos" />
+
+
+</android.support.constraint.ConstraintLayout>

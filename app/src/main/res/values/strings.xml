@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Nós S. A. Mat de Construção</string>
+    <string name="categoria_de_produtos">Categoria de produtos</string>
+    <string name="categoria">categoria</string>
+    <string name="todos">Todos</string>
+    <string name="m_veis_e_decora_o">Móveis e Decoração</string>
+    <string name="ferramentas">Ferramentas</string>
+    <string name="material_de_construcao">Material de Construção</string>
+    <string name="desenvolvido_por">Desenvolvido por Erica Camila Silva Cunha</string>
+    <string name="categoria2">categoria</string>
+    <string name="produtos">Produtos</string>
+</resources>
