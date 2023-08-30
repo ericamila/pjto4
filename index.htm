@@ -1,0 +1,3417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='Cp1252'>
+  
+  <title>Result Data</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <style>
+  * { 
+    margin: 0; 
+    padding: 0; 
+  }
+  body { 
+    font: 14px/1.4 Palatino, Serif; 
+  }
+  
+  /* 
+  Generic Styling, for Desktops/Laptops 
+  */
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #9B9B9B; 
+    text-align: left; 
+  }
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead tr { position: absolute;top: -9999px;left: -9999px;}
+    tr { border: 1px solid #9B9B9B; }
+    td { border: none;border-bottom: 1px solid #9B9B9B; position: relative;padding-left: 50%; }
+    
+    td:before { position: absolute;top: 6px;left: 6px;width: 45%; padding-right: 10px; white-space: nowrap;}
+    
+    /*
+    Label the data
+    */
+td:nth-of-type(1):before { content: "NOME_SUBMODELO"; }
+td:nth-of-type(2):before { content: "NOME_OBJETO"; }
+td:nth-of-type(3):before { content: "DESC_OBJETO"; }
+td:nth-of-type(4):before { content: "TIPO"; }
+td:nth-of-type(5):before { content: "DESC_RESUMIDA"; }
+  }
+  
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    body { 
+      padding: 0; 
+      margin: 0; 
+      width: 320px; }
+    }
+  
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body { 
+      width: 495px; 
+    }
+  }
+  
+  </style>
+  <!--<![endif]-->
+<script type="text/javascript">
+
+function search(){
+  
+  var s = document.getElementById('search').value;
+
+  rows = document.getElementById('data').getElementsByTagName('TR');
+  for(var i=0;i<rows.length;i++){
+    if ( rows[i].textContent.indexOf(s)>0  || s.length==0 ) {
+	  rows[i].style.display ='';
+    } else {
+      rows[i].style.display ='none';
+    }
+  }
+}
+
+
+var timer;
+function delayedSearch() {
+	clearTimeout(timer);
+	console.log('delay-ing')
+    timer = setTimeout(function () {
+		console.log('delay-running')
+		search();
+    }, 500);
+  }</script>
+</head>
+
+<body>
+<div><input type="text" size="30" maxlength="1000" value="" id="search" onkeyup="delayedSearch();" /><input type="button" value="Go" onclick="lsearch();"/> </div>
+<table><thead><tr>	<th>NOME_SUBMODELO</th>
+	<th>NOME_OBJETO</th>
+	<th>DESC_OBJETO</th>
+	<th>TIPO</th>
+	<th>DESC_RESUMIDA</th>
+</tr></thead>
+<tbody id="data">
+
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>ACAO</td>
+<td>Tabela que armazena as ações de um programa de governo, na composição do PAT - Plano Anual de Trabalho. Um Projeto, Atividade ou Operação Especial, quando associado a uma Unidade Orçamentária, gera uma ação.</td>
+<td>T</td>
+<td>Ação</td>
+	</tr>
+	<tr>
+<td>CBA e Subconta</td>
+<td>ACWTB0001</td>
+<td>Tabela que armazena as informações dos bancos credenciados junto à FEBRABAN.</td>
+<td>T</td>
+<td>Banco</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0001</td>
+<td>Tabela que armazena as informações dos bancos credenciados junto à FEBRABAN.</td>
+<td>T</td>
+<td>Banco</td>
+	</tr>
+	<tr>
+<td>CBA e Subconta</td>
+<td>ACWTB0002</td>
+<td>Tabela que armazena as agências bancárias dos bancos credenciados junto à FEBRABAN.</td>
+<td>T</td>
+<td>Agência Bancária</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0002</td>
+<td>Tabela que armazena as agências bancárias dos bancos credenciados junto à FEBRABAN.</td>
+<td>T</td>
+<td>Agência Bancária</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 4º Estágio</td>
+<td>ACWTB0003</td>
+<td>Tabela que armazena os comprovantes de depósito de devolução, utilizados para registro por GCV/RDR.</td>
+<td>T</td>
+<td>Depósito de Devolução (RDR/GCV)</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Extraorçamentária</td>
+<td>ACWTB0004</td>
+<td>Tabela que armazena os fatos extraorçamentários utilizado para emissão de NOE/NEX.</td>
+<td>T</td>
+<td>Fato Extra-Orçamentário</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0005</td>
+<td>Tabela que armazena as transações contábeis do sistema FIPLAN.</td>
+<td>T</td>
+<td>Transação Contábil</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - OPE</td>
+<td>ACWTB0006</td>
+<td>Tabela que armazena informações relativas aos itens de legislação utilizados como amparo legal no registro de documentos e contratos do sistema FIPLAN, identificados de acordo com a transação contábil</td>
+<td>T</td>
+<td>Amparo Legal</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0006</td>
+<td>Tabela que armazena informações relativas aos itens de legislação utilizados como amparo legal no registro de documentos e contratos do sistema FIPLAN, identificados de acordo com a transação contábil</td>
+<td>T</td>
+<td>Amparo Legal</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0006</td>
+<td>Tabela que armazena informações relativas aos itens de legislação utilizados como amparo legal no registro de documentos e contratos do sistema FIPLAN, identificados de acordo com a transação contábil</td>
+<td>T</td>
+<td>Amparo Legal</td>
+	</tr>
+	<tr>
+<td>Legislação</td>
+<td>ACWTB0006</td>
+<td>Tabela que armazena informações relativas aos itens de legislação utilizados como amparo legal no registro de documentos e contratos do sistema FIPLAN, identificados de acordo com a transação contábil</td>
+<td>T</td>
+<td>Amparo Legal</td>
+	</tr>
+	<tr>
+<td>Parâmetros</td>
+<td>ACWTB0007</td>
+<td>Tabela que armazena os parâmetros financeiros do sistema. 
+Os parâmetros financeiros representam indicadores que visam nortear e controlar negocialmente os procedimentos da execução financeira no sistema FIPLAN.
+</td>
+<td>T</td>
+<td>Parâmetro Financeiro</td>
+	</tr>
+	<tr>
+<td>Calendário</td>
+<td>ACWTB0009</td>
+<td>Tabela que armazena a tabela de calendário, contendo os feriados registrados no sistema FIPLAN, para fins de validação das datas contábeis na inclusão de documentos.</td>
+<td>T</td>
+<td>Calendário</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0010</td>
+<td>Tabela que armazena informações das modalidades de licitação, para uso na execução da despesa a partir do documento PED. 
+Esta tabela não é controlada por exercício por armazenar apenas os nomes das modalidades de licitação; no entanto, os limites e períodos de vigências aplicados a cada modalidade, conjugados com o tipo de despesa e natureza da instituição das Unidades Orçamentárias do Estado, estas sim, são controladas por exercício.
+</td>
+<td>T</td>
+<td>Modalidade de Licitação</td>
+	</tr>
+	<tr>
+<td>CBA e Subconta</td>
+<td>ACWTB0011</td>
+<td>Tabela que armazena os registros de associação das contas bancárias com suas fontes de recursos (CBA/ Fonte), a partir do registro de Conta Bancária UG (CBA/UG).</td>
+<td>T</td>
+<td>CBA - Fonte</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>ACWTB0012</td>
+<td>Tabela auxiliar utilizada para apoio ao desenvolvimento do sistema, que mostra associações das opções do menu e os artefatos relacionados a cada opção.</td>
+<td>T</td>
+<td>SUPORTE Menu x Artefato (CSU/REL)</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>ACWTB0014</td>
+<td>Tabela auxiliar utilizada pelos desenvolvedores da aplicação, contendo todas as opções do menu da aplicação, e sua relação com os casos de uso da aplicação.</td>
+<td>T</td>
+<td>SUPORTE Menu</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>ACWTB0015</td>
+<td>Tabela auxiliar da equipe de desenvolvimento do sistema, contendo a relação de todos os artefatos do sistema.</td>
+<td>T</td>
+<td>SUPORTE Artefato</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0016</td>
+<td>Tabela que armazena o período de vigência dos valores de cada modalidade de licitação. Os valores segregados por tipo de instituição, e que são vinculados a estes prazos de vigência, ficam armazenados na tabela ACWTB0043.
+A mudança dos limites para licitação, de acordo com os tipos de despesa e de instituição, são definidos pela Lei 8.666/1993 e demais leis posteriores que alteram seu texto; visando justamente permitir a alteração de possíveis limites por modalidade, é que se criou esta tabela, que estabelece os períodos de vigência e flexibiliza as alterações de datas e limites em conformidade com a legislação vigente.
+</td>
+<td>T</td>
+<td>Modalidade de Licitação - Vigência</td>
+	</tr>
+	<tr>
+<td>Autorizadores FIPLAN</td>
+<td>ACWTB0017</td>
+<td>Tabela que armazena os ordenadores de despesa do Estado. Um ordenador de despesa é "toda e qualquer autoridade de cujos atos resultarem emissão de empenho, autorização de pagamento, suprimento ou dispêndio de recursos" (Decreto-lei Federal nº 200/67, art. 80, § 1º). No sistema FIPLAN, os ordenadores de despesa são usuários habilitados com o papel de autorizar a emissão de empenhos em geral; o papel da autorização de pagamentos é uma ação delegada pelo ordenador, para si ou para outrem, que no sistema são chamados de liberadores de pagamento.
+O ordenador de despesa é cadastrado por Unidade Orçamentária, e habilitado para esta ação em uma ou mais Unidades Gestoras. As UG's habilitadas por ordenador já ficam armazenados em outra tabela: ACWTB0034.
+</td>
+<td>T</td>
+<td>Ordenador</td>
+	</tr>
+	<tr>
+<td>Autorizadores FIPLAN</td>
+<td>ACWTB0021</td>
+<td>Tabela que armazena informações dos contabilistas. Os dados dos contabilistas ficam cadastrados na tabela principal, e suas UOs/UGs cadastradas em outra tabela: ACWTB0033.</td>
+<td>T</td>
+<td>Contabilista</td>
+	</tr>
+	<tr>
+<td>Autorizadores FIPLAN</td>
+<td>ACWTB0022</td>
+<td>Tabela que armazena informações dos liberadores de pagamento. Os liberadores de pagamento são usuários cuja atribuição de liberar os pagamentos por NOB, NEX ou OPE é atribuída por um ordenador de despesa.
+Cada liberadora de pagamento está associado a um ordenador de despesa, e tem suas Unidades Gestoras habilitadas para liberação, vinculadas ao ordenador de despesa e as UG's que este também é habilitado a autorizar o gasto (empenho).
+</td>
+<td>T</td>
+<td>Liberador</td>
+	</tr>
+	<tr>
+<td>Autorizadores FIPLAN</td>
+<td>ACWTB0023</td>
+<td>Tabela que armazena informações dos gerentes responsáveis pela solicitação de Notas de Lançamento Contábil (NLC) e pela aprovação de Suprimentos de Fundos (SDF). Todo gerente responsável é um usuário, habilitado para atuar sistemicamente nas ações citadas para uma única Unidade Gestora; no entanto, é possível incluir o mesmo usuário como gerente responsável em mais de uma UG, e também de possuir mais de um gerente responsável por UG.</td>
+<td>T</td>
+<td>Gerente Responsável</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0024</td>
+<td>Dentre as várias tabelas que constituem o Cadastro de Credores do FIPLAN, esta tabela representa a principal delas: nesta, ficam definidos o tipo de credor (PF, PJ ou IG) e a categoria do credor, que são atributos determinantes em todo o processo de execução no sistema FIPLAN, além de outros atributos criados para nortear o processo de execução.</td>
+<td>T</td>
+<td>Credor</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0025</td>
+<td>Tabela que agrega o Cadastro de Credores, mantendo atributos relativos aos credores que são PESSOAS JURÍDICAS. Representa, na verdade, uma associativa entre a tabela de credores (ACWTB0024) e a tabela de pessoa jurídica (ACWTB0080).</td>
+<td>T</td>
+<td>Credor - PJ</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0026</td>
+<td>Tabela que armazena as contas correntes bancárias dos credores (contas recebedoras de créditos do Estado). Eventualmente, contas bancárias pagadoras, cadastradas na tabela ACWTB0044, podem também estar cadastradas nesta tabela, mas vinculadas a um credor em razão do recebimento de NOB, NEX ou OPE oriundas de pagamentos intraorçamentários.</td>
+<td>T</td>
+<td>Credor - Conta Bancária</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0027</td>
+<td>Tabela que armazena informações do documento PED - Pedido de Empenho da Despesa.</td>
+<td>T</td>
+<td>PED</td>
+	</tr>
+	<tr>
+<td>Execução por Lista (NOBLIST/DOTLIST/NEXTLIST)</td>
+<td>ACWTB0028</td>
+<td>Tabela que armazena informações da Lista de Credores (NOBLIST). Uma lista de credores é composta: (1) pelas informações gerais da lista de credores (cujos atributos estão agrupados nesta tabela); (2) pela relação de credores da lista (ACWTB0105); e (3) pela relação de consignações por credor (ACWTB0106).</td>
+<td>T</td>
+<td>NOBLIST</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0029</td>
+<td>Tabela que agrega o Cadastro de Credores, mantendo atributos relativos aos credores que são PESSOAS FÍSICAS.</td>
+<td>T</td>
+<td>Credor - PF</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0030</td>
+<td>Tabela que armazena informações do documento SDF - Suprimento de Fundos. O termo "PAD" referido nos campos desta tabela são do primeiro nome atribuído ao documento no legado da implantação que veio do FIPLAN-MT (PAD - Pedido de Adiantamento) e que posteriormente mudou para CAD - Concessão de Adiantamento.</td>
+<td>T</td>
+<td>SDF</td>
+	</tr>
+	<tr>
+<td>Parâmetros</td>
+<td>ACWTB0031</td>
+<td>Tabela que armazena os parâmetros contábeis do sistema, utilizados pelo componente de lançamentos automáticos (motor contábil) na geração dos lançamentos contábeis.</td>
+<td>T</td>
+<td>Parâmetro Contábil</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0032</td>
+<td>Tabela que armazena as contas contábeis que compõem o Plano de Contas.</td>
+<td>T</td>
+<td>Conta Contábil</td>
+	</tr>
+	<tr>
+<td>Autorizadores FIPLAN</td>
+<td>ACWTB0033</td>
+<td>Tabela que armazena as Unidades Gestoras por contabilista.</td>
+<td>T</td>
+<td>Contabilista - UG</td>
+	</tr>
+	<tr>
+<td>Autorizadores FIPLAN</td>
+<td>ACWTB0034</td>
+<td>Tabela que armazenas as Unidades Gestoras por ordenador de despesa.</td>
+<td>T</td>
+<td>Ordenador - UG</td>
+	</tr>
+	<tr>
+<td>Autorizadores FIPLAN</td>
+<td>ACWTB0035</td>
+<td>Tabela que armazena das Unidades Gestoras por liberador de pagamento, associadas a um ordenador de despesa/UG.</td>
+<td>T</td>
+<td>Liberador - UG</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0036</td>
+<td>Tabela que armazena os grupos de lançamento contábil.</td>
+<td>T</td>
+<td>Grupo de Lançamento Contábil</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0037</td>
+<td>Tabela que armazena as sequências de lançamento automático, associadas aos grupos de lançamento contábil.</td>
+<td>T</td>
+<td>Sequência de Lançamento Contábil</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0038</td>
+<td>Tabela que armazena os Atos e/ou Fatos Contábeis (AFC) utilizados pelo sistema na inclusão das Notas de Lançamento Automático (NLA). Um AFC é um evento contábil criado com determinada finalidade, para fins de atender uma necessidade de contabilização.
+O termo "fato extra-caixa" foi adotado no sistema quando de sua implantação; com o passar dos anos, percebeu-se que o termo "extra-caixa" estava mal conceituado, uma vez que um evento contábil registrado como fato contábil poderia também representar eventos movimentando contas de caixa e equivalentes de caixa, bem como, não representar propriamente fatos, mas também atos potenciais praticados pelo administrador, que poderão alterar qualitativa e quantitativamente o patrimônio.
+</td>
+<td>T</td>
+<td>AFC</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0039</td>
+<td>As contas contábeis para consulta de saldo existem para armazenar, por transação, possíveis contas contábeis que possam ser utilizadas para exibição de saldos em tela, ou para validações de saldo anteriores à confirmação de inclusão de um documento contábil. 
+Cada conta contábil para consulta de saldo é incluída por transação contábil e por sequência; as sequências são criadas, definidas e fixadas na documentação de negócio e no código-fonte, não sendo passível a determinação do papel de cada sequência por parte do usuário.
+Esta tabela armazena informações das sequências de contas contábeis para consulta de saldo, que posteriormente serão atreladas a uma transação no cadastro das contas contábeis para consulta de saldo.
+</td>
+<td>T</td>
+<td>Sequência de Consulta de Saldo</td>
+	</tr>
+	<tr>
+<td>Autorizadores FIPLAN</td>
+<td>ACWTB0040</td>
+<td>Tabela que armazena informações dos Chefes dos Núcleos Setoriais de Finanças (NSF) das Unidades Orçamentárias do Estado. Em Roraima, são representados pelos chefes das UGAM’s (Unidades Gestoras de Atividade Meio) e/ou diretores financeiros destas Unidades.
+Esta tabela é opcional: não adicionar chefes do NSF fará com que as NOB’s sejam emitidas sem o nome para assinatura.
+</td>
+<td>T</td>
+<td>Chefe do NSF</td>
+	</tr>
+	<tr>
+<td>Autorizadores FIPLAN</td>
+<td>ACWTB0041</td>
+<td>Tabela que armazena informações dos autorizadores de ARR. Os autorizadores de ARR podem ou não serem usuários do sistema. Esta tabela é opcional, e é utilizada apenas para exibir nomes a serem exibidos nas assinaturas dos documentos e ARR e na Relação de Pagamentos (RE), esta última apenas aos autorizadores de ARR cadastrados na UO 99000 (Tesouro). Apesar da transmissão eletrônica em Roraima ser descentralizada, nunca houveram ações relacionadas à exibição dos autorizadores de ARR nas RE’s que não são centralizadas no Tesouro. Há possibilidade de se definir de 0 (zero) até 04 (quatro) autorizadores de ARR por Unidade Orçamentária. 
+Esta tabela é opcional: não informar nenhum autorizador de ARR, implica em imprimir os PDFs dos documentos ARR e as relações de pagamento (RE) exibindo apenas traços para assinatura.
+</td>
+<td>T</td>
+<td>Autorizador de ARR</td>
+	</tr>
+	<tr>
+<td>Legislação</td>
+<td>ACWTB0042</td>
+<td>Tabela que armazena itens da legislação relevantes ao processo de planejamento e execução contábil, orçamentária e financeira da receita e despesa públicas. Sua utilização é opcional, não se associa a nenhuma outra tabela do sistema; sua finalidade é apenas de manter um referencial de consulta ao usuário acerca da legislação vigente.</td>
+<td>T</td>
+<td>Legislação</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0043</td>
+<td>Tabela que armazena os valores-limites mínimo e máximo por modalidade de licitação, de acordo com o tipo de despesa e tipo de instituição da Unidade Orçamentária. Não possui relacionamento com as Unidades Orçamentárias, apenas são tabelas consultadas pelo sistema no momento da inclusão do documento PED - Pedido de Empenho da Despesa.</td>
+<td>T</td>
+<td>Modalidade de Licitação - Valores</td>
+	</tr>
+	<tr>
+<td>CBA e Subconta</td>
+<td>ACWTB0044</td>
+<td>O cadastro de contas bancárias no FIPLAN é segregado em dois grupos distintos: contas correntes bancárias dos credores e contas correntes bancárias das Unidades Orçamentárias. A tabela ACWTB0044 armazena as contas bancárias das Unidades Orçamentárias do Estado.
+O cadastro admite, por exercício, apenas um registro de banco, agência, C/C + DV com os mesmos dados; contudo, permite que uma mesma conta bancária (CBA) seja atribuída a mais de uma Unidade Orçamentária (CBA/UO), durante o cadastro e manutenção da conta bancária: cada UO associada uma CBA, se associa com suas Unidades Gestoras (CBA/UG), e em cada UG, faz-se a associação com as fontes de recursos movimentadas pela UG (CBA/Fonte). Estes controles permitirão, durante o processo de execução financeira no FIPLAN, controlar a partir de regras negociais definidas internamente nos documentos contábeis, a utilização de cada conta bancária tomando por base o seu tipo, suas Unidades Orçamentárias, Unidades Gestoras e fontes de recursos.
+</td>
+<td>T</td>
+<td>CBA</td>
+	</tr>
+	<tr>
+<td>CBA e Subconta</td>
+<td>ACWTB0045</td>
+<td>Tabela que armazena os registros de associação das contas bancárias com suas Unidades Orçamentárias (CBA/UO), a partir do registro do cadastro da conta bancária (CBA).</td>
+<td>T</td>
+<td>CBA - UO</td>
+	</tr>
+	<tr>
+<td>CBA e Subconta</td>
+<td>ACWTB0046</td>
+<td>Tabela que armazena os registros de associação das contas bancárias com suas Unidades Gestoras (CBA/UG), a partir do registro de Conta Bancária UO (CBA/UO).</td>
+<td>T</td>
+<td>CBA - UG</td>
+	</tr>
+	<tr>
+<td>CBA e Subconta</td>
+<td>ACWTB0047</td>
+<td>Tabela que permite o armazenamento das subcontas utilizadas na execução financeira, orçamentária e extraorçamentária. A subconta tem como papel segregar recursos financeiros dentro de uma mesma conta bancária a partir de controles contábeis, com o único objetivo de servir como ferramenta de gestão dos recursos movimentados em uma conta.
+Assim como no cadastro de contas, ao incluir/alterar uma subconta, é necessário também associar a cada subconta quais Unidades Orçamentárias e Unidades Gestoras poderão utilizá-la durante a execução no FIPLAN.
+</td>
+<td>T</td>
+<td>Subconta</td>
+	</tr>
+	<tr>
+<td>CBA e Subconta</td>
+<td>ACWTB0048</td>
+<td>Tabela que armazena os registros de associação das subcontas com suas Unidades Orçamentárias (Subconta/UO), a partir do registro do cadastro da subconta.</td>
+<td>T</td>
+<td>Subconta - UO</td>
+	</tr>
+	<tr>
+<td>CBA e Subconta</td>
+<td>ACWTB0049</td>
+<td>Tabela que armazena os registros de associação das subcontas com suas Unidades Gestoras (CBA/UG), a partir do registro de Subconta/UO.</td>
+<td>T</td>
+<td>Subconta - UG</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0050</td>
+<td>Tabela que armazena valores de naturezas de despesa vinculadas aos documentos SDF - Suprimento de Fundos.</td>
+<td>T</td>
+<td>SDF - Natureza da Despesa</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0051</td>
+<td>Tabela que armazena status e atributos da conformidade diária e documental (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Conformidade Documental</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0052</td>
+<td>Tabela que armazena informações do documento ABD - Abertura da Despesa.</td>
+<td>T</td>
+<td>ABD</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0053</td>
+<td>Tabela que armazena informações do documento NPO - Nota de Provisão Orçamentária.</td>
+<td>T</td>
+<td>NPO</td>
+	</tr>
+	<tr>
+<td>Previsão da Receita</td>
+<td>ACWTB0054</td>
+<td>Tabela que armazena informações do documento ABR - Abertura da Receita.</td>
+<td>T</td>
+<td>ABR</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0055</td>
+<td>Tabela que armazena informações do documento BMC - Baixa de Material de Consumo.</td>
+<td>T</td>
+<td>BMC</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0056</td>
+<td>Tabela que armazena informações do documento CAC - Controle de Avais Concedidos (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>CAC</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0057</td>
+<td>Tabela que armazena informações do documento LCA - Limite de Créditos Adicionais (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>LCA</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0058</td>
+<td>Tabela associativa entre as contas parâmetros e contas contábeis no Plano de Contas.</td>
+<td>T</td>
+<td>Conta Contábil - Parâmetro</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0059</td>
+<td>Tabela que armazena informações do documento RDE - Receita Extra-Orçamentária</td>
+<td>T</td>
+<td>RDE</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0060</td>
+<td>Tabela que armazena informações do documento NOE - Solicitação de Pagamento Extra-Orçamentário.</td>
+<td>T</td>
+<td>Conta Contábil - Consulta de Saldo</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Extraorçamentária</td>
+<td>ACWTB0061</td>
+<td>Tabela que armazena informações do documento NEX - Nota de Ordem Bancária Extra-Orçamentária.</td>
+<td>T</td>
+<td>NEX</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Extraorçamentária</td>
+<td>ACWTB0062</td>
+<td>Tabela que armazena informações do documento NOE - Solicitação de Pagamento Extra-Orçamentário.</td>
+<td>T</td>
+<td>NOE</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0063</td>
+<td>Tabela que armazena as classes da conta contábil: a classe corresponde ao 1º dígito da conta contábil.</td>
+<td>T</td>
+<td>Classe</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0064</td>
+<td>Tabela que armazena o grupo da conta contábil, que corresponde ao 2º dígito da conta contábil.</td>
+<td>T</td>
+<td>Grupo</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0065</td>
+<td>Tabela que armazena o subgrupo da conta contábil, que corresponde ao 3º dígito da conta contábil.</td>
+<td>T</td>
+<td>Subgrupo</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0066</td>
+<td>Tabela que armazena o título da conta contábil, que corresponde ao 4º dígito do código da conta contábil. Até o exercício de 2013 - quando o Estado de Roraima utilizava o Plano de Contas Misto - este atributo era chamado de elemento da conta contábil, e foi modificado para título da conta contábil com a implantação do PCASP - Plano de Contas Aplicado ao Setor Público.</td>
+<td>T</td>
+<td>Elemento/Título</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0067</td>
+<td>Tabela que armazena o subtítulo da conta contábil, que corresponde ao 5º dígito do código da conta contábil. Até o exercício de 2013 - quando o Estado de Roraima utilizava o Plano de Contas Misto - este atributo era chamado de subelemento da conta contábil, e foi modificado para subtítulo da conta contábil com a implantação do PCASP - Plano de Contas Aplicado ao Setor Público.</td>
+<td>T</td>
+<td>Subelemento/Subtítulo</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0068</td>
+<td>Tabela que armazena o item da conta contábil, e que corresponde ao 6º e 7º dígitos do código da conta contábil.</td>
+<td>T</td>
+<td>Item</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0069</td>
+<td>Tabela que armazena o subitem da conta contábil, que corresponde ao 8º e 9º dígitos do código da conta contábil.</td>
+<td>T</td>
+<td>Subitem</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>ACWTB0070</td>
+<td>Tabela utilizada para armazenar a identificação do nome e descrição de dos objetos em banco de dados. Na prática, só foram armazenas informações das tabelas e views do BD, com o propósito de servir de referencial de consulta à equipe de desenvolvimento do sistema FIPLAN, mas poderiam agregar outras estruturas de dados caso surgisse esta necessidade.
+Esta tabela não é mapeada no código-fonte, pois tem apenas a atribuição de ser referencial de consulta e apoio ao desenvolvimento
+</td>
+<td>T</td>
+<td>SUPORTE Objeto (Tabela/View)</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>ACWTB0071</td>
+<td>Tabela auxiliar do gerenciamento de banco de dados, onde devem constar todos os submodelos criados sobre o Modelo de Entidade-Relacionamento, que irão auxiliar no desenvolvimento de relatórios, consultas e novas funcionalidades no sistema FIPLAN-RR.</td>
+<td>T</td>
+<td>SUPORTE Submodelo</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>ACWTB0072</td>
+<td>Tabela auxiliar utilizada pelos desenvolvedores da aplicação, que mostra associações dos artefatos da aplicação (especificamente as especificações de: caso de uso) e todas as tabelas que estes artefatos executam alguma ação de persistência no banco de dados.
+Não são contempladas aqui as consultas, relatórios e especificações de integração.
+</td>
+<td>T</td>
+<td>SUPORTE Tabela x Artefato</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>ACWTB0073</td>
+<td>Tabela auxiliar utilizada no gerenciamento de banco de dados, que identifica quais tabelas compõem cada submodelo criado sob o Modelo de Entidade-Relacionamento.</td>
+<td>T</td>
+<td>SUPORTE Tabela x Submodelo</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0074</td>
+<td>Tabela que as armazena informações do documento NLC - Nota de Lançamento Contábil.</td>
+<td>T</td>
+<td>NLC</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0075</td>
+<td>Tabela que as armazena informações dos lançamentos contábeis gerados pelo documento NLC - Nota de Lançamento Contábil.</td>
+<td>T</td>
+<td>NLC - Valores</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0076</td>
+<td>Tabela que as armazena os perfis para aprovação do documento NLC - Nota de Lançamento Contábil, selecionado na fase de autorização deste documento.</td>
+<td>T</td>
+<td>NLC - Perfil</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0077</td>
+<td>Tabela que as armazena informações do documento ALO - Alteração Orçamentária da Despesa. Este documento contabiliza os créditos adicionais efetivados durante um exercício orçamentário.</td>
+<td>T</td>
+<td>ALO</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0078</td>
+<td>Tabela que agrega o Cadastro de Credores, mantendo atributos relativos aos credores que são INSCRIÇÕES GENÉRICAS. Representa, na verdade, uma associativa entre a tabela de credores (ACWTB0024) e a tabela de inscrição genérica (ACWTB0081).</td>
+<td>T</td>
+<td>Credor - IG</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0079</td>
+<td>Tabela que armazena informações das pessoas físicas: uma PESSOA FÍSICA representam todas as pessoas que possuem um CPF - Cadastro de Pessoa Física: pode ser um usuário negocial ou um credor  no sistema FIPLAN, agregando tanto parte do Cadastro de Usuários como também do Cadastro de Credores.</td>
+<td>T</td>
+<td>PF</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0079</td>
+<td>Tabela que armazena informações das pessoas físicas: uma PESSOA FÍSICA representam todas as pessoas que possuem um CPF - Cadastro de Pessoa Física: pode ser um usuário negocial ou um credor  no sistema FIPLAN, agregando tanto parte do Cadastro de Usuários como também do Cadastro de Credores.</td>
+<td>T</td>
+<td>PF</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0080</td>
+<td>Tabela que armazena informações das pessoas jurídicas: uma PESSOA JURÍDICA representam todas as entidades que possuem informação no CNPJ - Cadastro Nacional de Pessoas Jurídicas: esta tabela agrega do Cadastro de Credores do sistema FIPLAN.</td>
+<td>T</td>
+<td>PJ</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0081</td>
+<td>Tabela que armazena informações das pessoas jurídicas: uma PESSOA JURÍDICA representam todas as entidades que possuem informação no CNPJ - Cadastro Nacional de Pessoas Jurídicas: esta tabela agrega do Cadastro de Credores do sistema FIPLAN.</td>
+<td>T</td>
+<td>IG</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0082</td>
+<td>Tabela que armazena os nomes dos bairros das cidades/municípios brasileiros, para fins de utilização em outras tabelas do sistema FIPLAN, a exemplo dos Cadastros de Credores e Contratos.</td>
+<td>T</td>
+<td>Bairro</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0083</td>
+<td>Tabela que armazena informações do documento de estorno ABD - Abertura da Despesa.</td>
+<td>T</td>
+<td>ABD - Estorno</td>
+	</tr>
+	<tr>
+<td>Previsão da Receita</td>
+<td>ACWTB0084</td>
+<td>Tabela que armazena informações do documento de estorno ABR - Abertura da Receita.</td>
+<td>T</td>
+<td>ABR - Estorno</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0085</td>
+<td>Tabela que armazena informações do documento NLA - Nota de Lançamento Automático.</td>
+<td>T</td>
+<td>NLA</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0086</td>
+<td>Tabela que armazena informações do documento de estorno NPO - Nota de Provisão Orçamentária.</td>
+<td>T</td>
+<td>NPO - Estorno</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0087</td>
+<td>Tabela que armazena informações do documento de estorno NLC - Nota de Lançamento Contábil.</td>
+<td>T</td>
+<td>NLC - Estorno</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0088</td>
+<td>Considerada com uma das tabelas mais importantes do sistema e que compõe a base contábil do sistema FIPLAN, é a principal delas e que recebe a denominação de CONTÁBIL ANALÍTICO, justamente por armazenar os lançamentos contábeis analíticos gerados pelos documentos contábeis do sistema.
+A persistência nesta tabela é feita pelo componente de lançamentos contábeis (motor contábil), que é disparado na confirmação das ações envolvendo os documentos contábeis.
+</td>
+<td>T</td>
+<td>Contábil Analítico</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0089</td>
+<td>Tabela que armazena o sequencial dos números de documentos do FIPLAN, por exercício e código da transação contábil. Os números de documento representam uma composição de 17 posições, conforme apresentada a seguir:
+99999.9999.99.99999-9
+
+
+Código da UO
+
+
+
+
+Código da UG
+
+
+2 últimos  dígitos do exercício
+
+
+Seq Nº Doctº
+(ACWTB0089)
+
+
+DV (módulo 10)
+Nesta tabela fica armazenado apenas o sequencial do último número gerado, para permitir que o módulo de geração do número do documento possa buscá-lo para geração do próximo número de documento.</td>
+<td>T</td>
+<td>Sequencial de Nº Doctº</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0090</td>
+<td>Tabela que compõe a base contábil do sistema FIPLAN, denominada CONTÁBIL CONSOLIDADO MENSAL. Esta tabela armazena os valores consolidados dos lançamentos contábeis agrupados por exercício, obedecendo à chave:
+"	Exercício	 (CD_EXERCICIO)
+"	Código da UO + UG 	 (ID_UNIDADE_GESTORA)
+"	Código da Conta Contábil 	 (IDEN_CONTA_CONTABIL)
+"	Nº Conta Corrente Contábil 	 (NUMR_CONTA_CORRENTE)
+
+A persistência nesta tabela é feita pelo componente de lançamentos contábeis (motor contábil); este mesmo componente possui um método controlador de saldos que administra os valores de reserva dos saldos contábeis nesta chave, haja vista que é neste tabela que o motor contábil faz as verificações de saldo para geração dos documentos, utilizando método controlador de saldos.
+</td>
+<td>T</td>
+<td>Contábil Consolidado Anual</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0091</td>
+<td>Tabela que armazena a classificação da despesa ao nível do subelemento da despesa, definida no momento da inclusão do documento LIQ - Liquidação.</td>
+<td>T</td>
+<td>LIQ - Subelemento</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Extraorçamentária</td>
+<td>ACWTB0093</td>
+<td>Tabela que armazena o documento de estorno NEX - Nota de Ordem Bancária Extra-Orçamentária.</td>
+<td>T</td>
+<td>NEX - Estorno</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0094</td>
+<td>Tabela que armazena informações do documento de estorno BMC - Baixa de Material de Consumo.</td>
+<td>T</td>
+<td>BMC - Estorno</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0095</td>
+<td>Tabela que armazena informações do documento de estorno CAC - Controle de Avais Concedidos (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>CAC - Estorno</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0096</td>
+<td>Tabela que armazena informações do documento de estorno LCA - Limite de Créditos Adicionais (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>LCA - Estorno</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0097</td>
+<td>Tabela que armazena informações do documento de estorno RDE - Receita Extra-Orçamentária</td>
+<td>T</td>
+<td>RDE - Estorno</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0098</td>
+<td>Tabela que armazena informações do documento de estorno NLA - Nota de Lançamento Automático.</td>
+<td>T</td>
+<td>NLA - Estorno</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0099</td>
+<td>Tabela que armazena informações do TCT - Termo de Cooperação Técnica. O TCT não é um documento do FIPLAN, mas tem como papel representar a formalização necessária ao destaque orçamentária entre Unidades Orçamentárias (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>TCT</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0100</td>
+<td>Tabela que armazena informações dos termos aditivos de cooperação técnica. Estes termos aditivos tem como propósito alterar vigência e valores a serem concedidos por meio de destaque orçamentário, e são vinculados a um TCT - Termo de Cooperação Técnica (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>TCT - Aditivo</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0101</td>
+<td>Tabela que armazena informações do documento de estorno PED - Pedido de Empenho da Despesa.</td>
+<td>T</td>
+<td>PED - Estorno</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 4º Estágio</td>
+<td>ACWTB0102</td>
+<td>Tabela que armazena informações do documento de estorno NOB - Nota de Ordem Bancária.</td>
+<td>T</td>
+<td>NOB - Estorno</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0103</td>
+<td>Tabela que armazena informações dos documentos de reforço/redução do PED - Pedido de Empenho da Despesa. O documento de reforço do PED é criado quando o valor do PED é aumentado, e o documento de redução do PED é criado quando este valor é diminuído. As ações de reforço ou redução do PED são registrados a partir da alteração do PED.</td>
+<td>T</td>
+<td>PED - Reforço/Redução</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0104</td>
+<td>Tabela que armazena informações dos itens de conformidade - diária e documental (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Item de Conformidade</td>
+	</tr>
+	<tr>
+<td>Execução por Lista (NOBLIST/DOTLIST/NEXTLIST)</td>
+<td>ACWTB0105</td>
+<td>Tabela que armazena informações dos credores de uma NOBLIST - Lista de Credores.</td>
+<td>T</td>
+<td>NOBLIST - Credor</td>
+	</tr>
+	<tr>
+<td>Execução por Lista (NOBLIST/DOTLIST/NEXTLIST)</td>
+<td>ACWTB0106</td>
+<td>Tabela que armazena informações das consignações dos credores de uma NOBLIST - Lista de Credores.</td>
+<td>T</td>
+<td>NOBLIST - Consignação</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0107</td>
+<td>Tabela que armazena informações do documento EMP - Empenho da Despesa.</td>
+<td>T</td>
+<td>EMP</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0108</td>
+<td>Tabela que armazena informações do documento de estorno do empenho EST - Estorno de Empenho. Dentre todos os documentos de estorno do FIPLAN, o estorno de empenho é o único documento que possui transação contábil específica para o estorno. Demais documentos utilizam a mesma transação contábil para documento normal e seu estorno.</td>
+<td>T</td>
+<td>EMP - Estorno (EST)</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 4º Estágio</td>
+<td>ACWTB0109</td>
+<td>Tabela que armazena informações do documento NOB - Nota de Ordem Bancária.</td>
+<td>T</td>
+<td>NOB</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0110</td>
+<td>Tabela que armazena informações do documento LIQ - Liquidação. No FIPLAN, este documento além de caracterizar o 3º estágio de execução da despesa também é utilizado para incorporar ao processo de despesa informações de pagamento, como definição das retenções, contas de pagamento e forma de recebimento do valor da despesa pelo credor e definição das datas previstas para pagamento (aqui denominada "data de vencimento").</td>
+<td>T</td>
+<td>LIQ</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0111</td>
+<td>Tabela que armazena informações dos pagamentos - principal e consignações - de um documento LIQ - Liquidação.</td>
+<td>T</td>
+<td>LIQ - Pagamento</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0112</td>
+<td>Tabela que armazena informações do documento de estorno LIQ - Liquidação.</td>
+<td>T</td>
+<td>LIQ - Estorno</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0113</td>
+<td>Tabela que armazena informações do documento ARR - Autorização de Repasse de Receita.</td>
+<td>T</td>
+<td>ARR</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0114</td>
+<td>Tabela que armazena informações do documento de estorno ARR - Autorização de Repasse de Receita.</td>
+<td>T</td>
+<td>ARR - Estorno</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0115</td>
+<td>Tabela que armazena informações do documento RDR - Registro da Receita Orçamentária.</td>
+<td>T</td>
+<td>RDR</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0116</td>
+<td>Tabela que armazena informações das receitas vinculadas de um documento RDR - Registro da Receita Orçamentária. Um documento RDR (ACWTB0115) só terá registros vinculados nesta tabela quando a receita registrada possuir vinculações.</td>
+<td>T</td>
+<td>RDR - Vinculada</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0117</td>
+<td>Tabela que armazena informações do documento de estorno RDR - Registro da Receita Orçamentária.</td>
+<td>T</td>
+<td>RDR - Estorno</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - OPE</td>
+<td>ACWTB0119</td>
+<td>Tabela que armazena informações do documento de estorno OPE - Ordem de Pagamento Especial.</td>
+<td>T</td>
+<td>OPE - Estorno</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0120</td>
+<td>Tabela que armazena informações da Conformidade Contábil (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Conformidade Contábil</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0121</td>
+<td>Tabela que armazena o check-list de itens de conformidade para documento cuja conformidade diária e documental foi registrada. Cada registro da tabela representa um item de conformidade, com status deste item para o documento em avaliação de conformidade (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Conformidade Documental - Lista de Itens</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0122</td>
+<td>Tabela que armazena os tipos de conta corrente contábil (CCC) aplicados às contas contábeis do Plano de Contas do FIPLAN. Não há interface para inclusão dos tipos de conta corrente contábil em razão de que a criação de novos tipos de CCC desdobram ações de mapeamento destes tipos nos documentos do FIPLAN onde as contas contábeis que utilizarão este novo tipo serão contabilizadas; assim, a inclusão é sempre feita via banco de dados, após avaliação da demanda e desdobramento de ações de mudança decorrentes de cada novo tipo de CCC criado.</td>
+<td>T</td>
+<td>Tipo de CCC</td>
+	</tr>
+	<tr>
+<td>Programação Financeira</td>
+<td>ACWTB0123</td>
+<td>Tabela armazena informações da consolidação da Programação Financeira Inicial por UO, UG, Fonte de Recurso e Grupo de Despesa, utilizada como insumo para inclusão dos documentos APD - Abertura da Programação Financeira da Despesa e NPD - Nota de Provisão da Programação Financeira da Despesa.
+Os dados gerados nesta tabela surgem da consolidação da despesa por dotação orçamentária, no momento da geração da despesa pelo PAT, utilizando a chave:
+"	Exercício	CD_EXERCICIO
+"	Código da Unidade Orçamentária	ID_UNIDADE_GESTORA
+"	Código da Unidade Gestora	ID_UNIDADE_GESTORA
+"	Código da Fonte de Recurso	ID_FONTE_RECURSO
+"	Código do Grupo de Despesa	ID_GRUPO_DESPESA
+"	Mês	(obtido da tabela MESES_DESEMBOLSO na geração da despesa pelo PAT)
+Estas informações irão subsidiar a geração da APD/NPD de abertura e por consequência auxiliar a publicação da PFI - Programação Financeira Inicial, exigida após a publicação da Lei Orçamentária Anual - LOA.
+</td>
+<td>T</td>
+<td>Consolidação da Programação Financeira</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>ACWTB0123</td>
+<td>Tabela armazena informações da consolidação da Programação Financeira Inicial por UO, UG, Fonte de Recurso e Grupo de Despesa, utilizada como insumo para inclusão dos documentos APD - Abertura da Programação Financeira da Despesa e NPD - Nota de Provisão da Programação Financeira da Despesa.
+Os dados gerados nesta tabela surgem da consolidação da despesa por dotação orçamentária, no momento da geração da despesa pelo PAT, utilizando a chave:
+"	Exercício	CD_EXERCICIO
+"	Código da Unidade Orçamentária	ID_UNIDADE_GESTORA
+"	Código da Unidade Gestora	ID_UNIDADE_GESTORA
+"	Código da Fonte de Recurso	ID_FONTE_RECURSO
+"	Código do Grupo de Despesa	ID_GRUPO_DESPESA
+"	Mês	(obtido da tabela MESES_DESEMBOLSO na geração da despesa pelo PAT)
+Estas informações irão subsidiar a geração da APD/NPD de abertura e por consequência auxiliar a publicação da PFI - Programação Financeira Inicial, exigida após a publicação da Lei Orçamentária Anual - LOA.
+</td>
+<td>T</td>
+<td>Consolidação da Programação Financeira</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 4º Estágio</td>
+<td>ACWTB0124</td>
+<td>Tabela que armazena informações do documento GCV - Guia de Crédito da Verba.</td>
+<td>T</td>
+<td>GCV</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 4º Estágio</td>
+<td>ACWTB0125</td>
+<td>Tabela que armazena informações dos valores devolvidos ao nível de subelemento da despesa através do documento GCV - Guia de Crédito da Verba.</td>
+<td>T</td>
+<td>GCV - Subelemento</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 4º Estágio</td>
+<td>ACWTB0126</td>
+<td>Tabela que armazena informações do documento de estorno GCV - Guia de Crédito da Verba.</td>
+<td>T</td>
+<td>GCV - Estorno</td>
+	</tr>
+	<tr>
+<td>Programação Financeira</td>
+<td>ACWTB0127</td>
+<td>Tabela que armazena informações do documento NPD - Nota de Provisão da Programação Financeira da Despesa.</td>
+<td>T</td>
+<td>NPD</td>
+	</tr>
+	<tr>
+<td>Programação Financeira</td>
+<td>ACWTB0128</td>
+<td>Tabela que armazena informações dos valores de adição e/ou redução do documento NPD - Nota de Provisão da Programação Financeira da Despesa.</td>
+<td>T</td>
+<td>NPD - Valores</td>
+	</tr>
+	<tr>
+<td>Programação Financeira</td>
+<td>ACWTB0129</td>
+<td>Tabela que armazena informações do documento PMD - Programação Mensal da Despesa.</td>
+<td>T</td>
+<td>PMD</td>
+	</tr>
+	<tr>
+<td>Programação Financeira</td>
+<td>ACWTB0130</td>
+<td>Tabela que armazena informações dos valores adição/redução de um documento PMD - Programação Mensal da Despesa.</td>
+<td>T</td>
+<td>PMD - Valores</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0131</td>
+<td>Tabela que armazena informações do documento CON - Concessão de Cotas Financeiras.</td>
+<td>T</td>
+<td>CON</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0132</td>
+<td>Tabela que armazena informações do documento de estorno CON - Concessão de Cotas Financeiras</td>
+<td>T</td>
+<td>CON - Estorno</td>
+	</tr>
+	<tr>
+<td>Parâmetros</td>
+<td>ACWTB0133</td>
+<td>Tabela que armazena os parâmetros gerais do sistema. Esta tabela foi criada com o propósito de criar indicativos objetivando a parametrização de valores e procedimentos utilizados em diferentes funções do sistema, cujo controle é sempre vinculado apenas ao exercício logado ou exercício-calendário corrente: ativação/desativação de processos integrados, valores-limites para autorização automática de concessões dentre outras situações.</td>
+<td>T</td>
+<td>Parâmetro Geral do Sistema</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0134</td>
+<td>Tabela que armazena informações do Bloqueio de Execução. O Bloqueio de Execução é uma ferramenta de gestão da execução orçamentária e extra-orçamentária do sistema FIPLAN, que permite ao gestor parametrizar controles de bloqueio da execução por UO/UG, transação contábil, credor, fonte de recurso, grupo de despesa, ato e/ou fato contábil ou até mesmo por usuário, em período específico ou não, dentro de um exercício orçamentário e financeiro.
+Esta tabela armazena informações básicas em si. Demais informações de controle do bloqueio são armazenadas nas suas tabelas associativas:
+"	Por UO/UG	 (ACWTB0139)
+"	Por transação contábil	 (ACWTB0138)
+"	Por credor	 (ACWTB0135)
+"	Por fonte de recurso	 (ACWTB0136)
+"	Por grupo de despesa	 (ACWTB0137)
+"	Por ato e/ou fato contábil	 (ACWTB0315)
+"	Por usuário	 (ACWTB0140)
+</td>
+<td>T</td>
+<td>Bloqueio de Execução</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0135</td>
+<td>Tabela associativa que armazena o Bloqueio de Execução por código de credor.</td>
+<td>T</td>
+<td>Bloqueio de Execução - Credor</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0136</td>
+<td>Tabela associativa que armazena o Bloqueio de Execução - por fonte de recurso.</td>
+<td>T</td>
+<td>Bloqueio de Execução - Fonte</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0137</td>
+<td>Tabela associativa que armazena o Bloqueio de Execução por grupo de despesa.</td>
+<td>T</td>
+<td>Bloqueio de Execução - Grupo</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0138</td>
+<td>Tabela associativa que armazena o Bloqueio de Execução por transação contábil.</td>
+<td>T</td>
+<td>Bloqueio de Execução - Transação</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0139</td>
+<td>Tabela associativa que armazena o Bloqueio de Execução por UO/UG.</td>
+<td>T</td>
+<td>Bloqueio de Execução - UG</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0140</td>
+<td>Tabela associativa que armazena o Bloqueio de Execução por usuário.</td>
+<td>T</td>
+<td>Bloqueio de Execução - Usuário</td>
+	</tr>
+	<tr>
+<td>Programação Financeira</td>
+<td>ACWTB0143</td>
+<td>Tabela que armazena informações do documento APD - Abertura da Programação da Despesa.</td>
+<td>T</td>
+<td>APD</td>
+	</tr>
+	<tr>
+<td>Programação Financeira</td>
+<td>ACWTB0144</td>
+<td>Tabela que armazena os valores adição/redução do documento APD - Abertura da Programação da Despesa.</td>
+<td>T</td>
+<td>APD - Valores</td>
+	</tr>
+	<tr>
+<td>Programação Financeira</td>
+<td>ACWTB0145</td>
+<td>Tabela que armazena informações do documento de estorno APD - Abertura da Programação da Despesa.</td>
+<td>T</td>
+<td>APD - Estorno</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0153</td>
+<td>Tabela que armazena informações dos tipos de crédito adicional.</td>
+<td>T</td>
+<td>Tipo de Crédito</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0154</td>
+<td>Tabela que armazena informações dos tipos de crédito adicional.</td>
+<td>T</td>
+<td>Tipo de Recurso de Crédito</td>
+	</tr>
+	<tr>
+<td>Programação Financeira</td>
+<td>ACWTB0157</td>
+<td>Tabela que armazena informações do replanejamento financeiro de um processo de crédito adicional. Esta tabela é alimentada na confirmação do crédito adicional, nas situações em que um processo de crédito adicional demanda replanejamento financeiro (alteração da programação financeira quando no processo de crédito há alteração no valor na UO, UG, fonte de recurso ou grupo de despesa).
+A proposta desta tabela é consolidar as informações dos valores anulados e suplementados utilizando a chave:
+"	Código da Unidade Orçamentária
+"	Código da Unidade Gestora
+"	Código da fonte de recurso
+"	Código do grupo de despesa
+Agrupando valores de anulação e suplementação, separadamente, com vistas a respaldar a geração do documento PMD - Programação Mensal da Despesa - que é responsável por registrar contabilmente as ações de replanejamento.
+</td>
+<td>T</td>
+<td>Replanejamento SEPLAN</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0157</td>
+<td>Tabela que armazena informações do replanejamento financeiro de um processo de crédito adicional. Esta tabela é alimentada na confirmação do crédito adicional, nas situações em que um processo de crédito adicional demanda replanejamento financeiro (alteração da programação financeira quando no processo de crédito há alteração no valor na UO, UG, fonte de recurso ou grupo de despesa).
+A proposta desta tabela é consolidar as informações dos valores anulados e suplementados utilizando a chave:
+"	Código da Unidade Orçamentária
+"	Código da Unidade Gestora
+"	Código da fonte de recurso
+"	Código do grupo de despesa
+Agrupando valores de anulação e suplementação, separadamente, com vistas a respaldar a geração do documento PMD - Programação Mensal da Despesa - que é responsável por registrar contabilmente as ações de replanejamento.
+</td>
+<td>T</td>
+<td>Replanejamento SEPLAN</td>
+	</tr>
+	<tr>
+<td>Programação Financeira</td>
+<td>ACWTB0158</td>
+<td>Representa uma tabela de detalhamento do replanejamento SEPLAN, justamente onde se detalha valores e as informações da chave:
+"	Código da Unidade Gestora
+"	Código da fonte de recurso
+"	Código do grupo de despesa
+O detalhamento dos valores mensais, anulados e/ou suplementados, serão detalhados apenas no documento PMD - Programação Mensal da Despesa, que irá utilizar as tabelas do replanejamento SEPLAN (ACWTB0157/158) como insumo para geração do documento.
+</td>
+<td>T</td>
+<td>Replanejamento SEPLAN - Valores</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0158</td>
+<td>Representa uma tabela de detalhamento do replanejamento SEPLAN, justamente onde se detalha valores e as informações da chave:
+"	Código da Unidade Gestora
+"	Código da fonte de recurso
+"	Código do grupo de despesa
+O detalhamento dos valores mensais, anulados e/ou suplementados, serão detalhados apenas no documento PMD - Programação Mensal da Despesa, que irá utilizar as tabelas do replanejamento SEPLAN (ACWTB0157/158) como insumo para geração do documento.
+</td>
+<td>T</td>
+<td>Replanejamento SEPLAN - Valores</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0160</td>
+<td>Tabela que armazena informações dos projetos de crédito adicional associados a um processo de crédito adicional. Um projeto representa uma ação (Projeto, Atividade ou Operação Especial e sua Unidade Orçamentária) cujo crédito está sendo anulado ou suplementado em um crédito adicional.</td>
+<td>T</td>
+<td>Crédito Adicional - Projeto</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0161</td>
+<td>Tabela que armazena informações dos elementos, anulantes e suplementantes, associados a um projeto do processo de créditos adicionais.</td>
+<td>T</td>
+<td>Crédito Adicional - Elemento</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0162</td>
+<td>Tabela que armazena informações dos convênios de arrecadação firmados entre o Tesouro Estadual e a rede bancária arrecadadora, para fins da integração FIPLAN x SIAT (arrecadação e receita integrada).</td>
+<td>T</td>
+<td>Convênio de Arrecadação</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0163</td>
+<td>Tabela que armazena informações dos tributos estaduais. Os códigos de tributo armazenados nesta tabela são os mesmos utilizados pelo SIAT - Sistema Integrado de Arrecadação Tributária. Esta tabela agrega o conjunto de tabelas aplicadas à Integração FIPLAN x SIAT para registro da arrecadação e receita integrada.</td>
+<td>T</td>
+<td>Tributo</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0164</td>
+<td>Tabela que armazena informações dos DAREs - Documentos de Arrecadação Estadual, recebidos via integração FIPLAN x SIAT para processamento da arrecadação e registro da receita integrada no FIPLAN.
+O DARE no FIPLAN é armazenados em duas tabelas:
+"	ACWTB0164   DARE/Capa de Lote;
+"	ACWTB0206   DARE/Valores, permitindo assim que um mesmo documento de arrecadação tenha um ou mais tributos com valores por tributo.
+Dá-se a denominação de DARE Tributário aos documentos de arrecadação recebidos diretamente pela integração, e que apresentação seus valores classificados por código de tributo; estes DAREs devem representar um espelho da mesma informação armazenada no SIAT.
+</td>
+<td>T</td>
+<td>DARE Tributário</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0165</td>
+<td>Tabela que armazena informações a respeito da abertura e fechamento contábil mensal, da receita e da despesa, que dá respaldo às definições de data nos documentos do FIPLAN.</td>
+<td>T</td>
+<td>Abertura/Fechamento Mensal</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0166</td>
+<td>Tabela que armazena série histórica as ações de abertura e/ou fechamento contábil mensal da receita e/ou da despesa, para fins de consulta do data/hora e usuário de execução do procedimento no sistema.</td>
+<td>T</td>
+<td>Abertura/Fechamento Mensal - Histórico</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0167</td>
+<td>Tabela que armazena os tipos de alteração de crédito (ALT). Esta tabela é utilizada no planejamento pelo acompanhamento da despesa, nos processos de créditos adicionais.</td>
+<td>T</td>
+<td>Tipo de Alteração de Crédito</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0168</td>
+<td>Tabela que armazena os nomes das rotinas (funcionalidades) por transação contábil, que são utilizadas no Subsistema de Gestão do sistema para controle das autorizações de datas retroativas e/ou futuras.
+Esta tabela é de gestão da equipe de desenvolvimento do sistema FIPLAN, uma vez que os códigos criados devem estar definidos e mapeados em cada classe de documento, por transação contábil.
+</td>
+<td>T</td>
+<td>Rotina</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0169</td>
+<td>Tabela que armazena informações da quantidade de dias retroativos/futuros autorizados por transação contábil, quando a autorização de datas retroativas/futuras é registrada por rotina de documento.</td>
+<td>T</td>
+<td>Autorização/Rotina x Rotina</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0170</td>
+<td>Tabela que armazena as autorizações de datas retroativas/futuras concedidas por transação, usuário e rotina de documento. 
+As autorizações de data de retroativa/futura, a partir da funcionalidade no sistema FIPLAN, podem ser registradas de duas maneiras:
+1.	Por USUÁRIO, o registro de autorização (ACWTB0170) terá associativas nas tabelas ACWTB0211 (autorização x datas retroativas/futuras concedidas por rotinas de documentos); ACWTB0212 (autorização x UO/UG autorizadas) e ACWTB0213 (autorização x usuários autorizados).
+2.	Por rotina de documento, que sistematicamente é aplicada a todos os usuários que não possuem autorização de datas retroativas/futuras por usuário, onde o registro de autorização (ACWTB0214) terá associativas na tabela ACWTB0169 (autorização x datas retroativas/futuras concedidas por rotinas de documentos).
+</td>
+<td>T</td>
+<td>Autorização/Usuário</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0171</td>
+<td>Tabela que armazena informações das receitas vinculadas a uma receita vinculadora: receita vinculadora é a natureza onde se efetua o registro da receita: o valor informado é repartido segundo percentuais calculados para cada natureza vinculada, e que ficam armazenadas nesta tabela.</td>
+<td>T</td>
+<td>Vinculação da Receita - Receita Vinculada</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0172</td>
+<td>Tabela que armazena informações das receitas vinculadoras: receita vinculadora é a natureza onde se efetua o registro da receita: o valor informado é repartido segundo percentuais calculados para cada natureza vinculada, e que ficam armazenadas nesta tabela.</td>
+<td>T</td>
+<td>Vinculação da Receita - Receita Vinculadora</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0173</td>
+<td>Tabela que armazena informações das deduções de receita registradas em receitas redutoras das receitas vinculadas de um documento RDR - Registro da Receita Orçamentária.</td>
+<td>T</td>
+<td>RDR - Redutora</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0174</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas à alienação de bens móveis, registradas contabilmente na transação ALI (37) vinculadas a um documento RDR - Registro da Receita Orçamentária ou RSS - Receita Integrada FIPLAN x SIAT. Esta tabela só foi utilizada até o exercício de 2013: em 2014, em razão de não haver definição negocial e consensual relativa às alienações patrimoniais, as informações relativas à alienação patrimonial preenchidas nesta tabela complementar deixaram de ser exigidas no registro da receita.</td>
+<td>T</td>
+<td>ALI - Bem Móvel</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0175</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas à alienação de bens imóveis, registradas contabilmente na transação ALI (37) vinculadas a um documento RDR - Registro da Receita Orçamentária ou RSS - Receita Integrada FIPLAN x SIAT. Esta tabela só foi utilizada até o exercício de 2013: em 2014, em razão de não haver definição negocial e consensual relativa às alienações patrimoniais, as informações relativas à alienação patrimonial preenchidas nesta tabela complementar deixaram de ser exigidas no registro da receita.</td>
+<td>T</td>
+<td>ALI - Bem Imóvel</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0176</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas à alienação de títulos mobiliários, registradas contabilmente na transação ALI (37) vinculadas a um documento RDR - Registro da Receita Orçamentária ou RSS - Receita Integrada FIPLAN x SIAT. Esta tabela só foi utilizada até o exercício de 2013: em 2014, em razão de não haver definição negocial e consensual relativa às alienações patrimoniais, as informações relativas à alienação patrimonial preenchidas nesta tabela complementar deixaram de ser exigidas no registro da receita.</td>
+<td>T</td>
+<td>ALI - Título Mobiliário</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0177</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas às receitas recebidas dos empréstimos concedidos pelo Estado, registradas contabilmente na transação ALI (37) vinculadas a um documento RDR - Registro da Receita Orçamentária ou RSS - Receita Integrada FIPLAN x SIAT. Esta tabela só foi utilizada até o exercício de 2013: em 2014, em razão de não haver definição negocial e consensual relativa às alienações patrimoniais, as informações relativas à alienação patrimonial preenchidas nesta tabela complementar deixaram de ser exigidas no registro da receita.</td>
+<td>T</td>
+<td>ALI - Concessão de Empréstimo</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0178</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas às obras e instalações, registradas contabilmente na transação AQS (73/75) vinculadas ao documento LIQ - Liquidação. Esta tabela só foi utilizada até o exercício de 2013: em 2014, com a implantação do documento AQS - Aquisição de Bens Patrimoniais e criação do estágio da despesa em liquidação, as informações relativas ao patrimônio foram absorvidas pela AQS e o complemento patrimonial gravado nesta tabela que era preenchido durante a liquidação da despesa deixou de existir.</td>
+<td>T</td>
+<td>AQS - Obra e Instalações</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0179</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas às aquisições de equipamentos e materiais permanentes, registradas contabilmente na transação AQS (73/75) vinculadas ao documento LIQ - Liquidação. Esta tabela só foi utilizada até o exercício de 2013: em 2014, com a implantação do documento AQS - Aquisição de Bens Patrimoniais e criação do estágio da despesa em liquidação, as informações relativas ao patrimônio foram absorvidas pela AQS e o complemento patrimonial gravado nesta tabela que era preenchido durante a liquidação da despesa deixou de existir.</td>
+<td>T</td>
+<td>AQS - Equipamentos e Material Permanente</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0180</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas às aquisições de bens imóveis, registradas contabilmente na transação AQS (73/75) vinculadas ao documento LIQ - Liquidação. Esta tabela só foi utilizada até o exercício de 2013: em 2014, com a implantação do documento AQS - Aquisição de Bens Patrimoniais e criação do estágio da despesa em liquidação, as informações relativas ao patrimônio foram absorvidas pela AQS e o complemento patrimonial gravado nesta tabela que era preenchido durante a liquidação da despesa deixou de existir.</td>
+<td>T</td>
+<td>AQS - Imóvel</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0181</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas às aquisições de bens móveis para venda ou revenda, registradas contabilmente na transação AQS (73/75) vinculadas ao documento LIQ - Liquidação. Esta tabela só foi utilizada até o exercício de 2013: em 2014, com a implantação do documento AQS - Aquisição de Bens Patrimoniais e criação do estágio da despesa em liquidação, as informações relativas ao patrimônio foram absorvidas pela AQS e o complemento patrimonial gravado nesta tabela que era preenchido durante a liquidação da despesa deixou de existir.</td>
+<td>T</td>
+<td>AQS - Bem para Venda ou Revenda</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0182</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas às aquisições de títulos de crédito (ações), registradas contabilmente na transação AQS (73/75) vinculadas ao documento LIQ - Liquidação. Esta tabela só foi utilizada até o exercício de 2013: em 2014, com a implantação do documento AQS - Aquisição de Bens Patrimoniais e criação do estágio da despesa em liquidação, as informações relativas ao patrimônio foram absorvidas pela AQS e o complemento patrimonial gravado nesta tabela que era preenchido durante a liquidação da despesa deixou de existir.</td>
+<td>T</td>
+<td>AQS - Título de Crédito</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0183</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas às aquisições de títulos de representação de capital já integralizado, registradas contabilmente na transação AQS (73/75) vinculadas ao documento LIQ - Liquidação. Esta tabela só foi utilizada até o exercício de 2013: em 2014, com a implantação do documento AQS - Aquisição de Bens Patrimoniais e criação do estágio da despesa em liquidação, as informações relativas ao patrimônio foram absorvidas pela AQS e o complemento patrimonial gravado nesta tabela que era preenchido durante a liquidação da despesa deixou de existir.</td>
+<td>T</td>
+<td>AQS - Título de Representação do Capital</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0184</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas à constituição ou aumento de capital de empresas, registradas contabilmente na transação AQS (73/75) vinculadas ao documento LIQ - Liquidação. Esta tabela só foi utilizada até o exercício de 2013: em 2014, com a implantação do documento AQS - Aquisição de Bens Patrimoniais e criação do estágio da despesa em liquidação, as informações relativas ao patrimônio foram absorvidas pela AQS e o complemento patrimonial gravado nesta tabela que era preenchido durante a liquidação da despesa deixou de existir.</td>
+<td>T</td>
+<td>AQS - Constituição ou Aumento de Capital</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0185</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas às concessões de empréstimos, registradas contabilmente na transação AQS (73/75) vinculadas ao documento LIQ - Liquidação. Esta tabela só foi utilizada até o exercício de 2013: em 2014, com a implantação do documento AQS - Aquisição de Bens Patrimoniais e criação do estágio da despesa em liquidação, as informações relativas ao patrimônio foram absorvidas pela AQS e o complemento patrimonial gravado nesta tabela que era preenchido durante a liquidação da despesa deixou de existir.</td>
+<td>T</td>
+<td>AQS - Concessão de Empréstimo</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0186</td>
+<td>Tabela complementar que armazena informações patrimoniais relativas aos depósitos compulsórios, registradas contabilmente na transação AQS (73/75) vinculadas ao documento LIQ - Liquidação. Esta tabela só foi utilizada até o exercício de 2013: em 2014, com a implantação do documento AQS - Aquisição de Bens Patrimoniais e criação do estágio da despesa em liquidação, as informações relativas ao patrimônio foram absorvidas pela AQS e o complemento patrimonial gravado nesta tabela que era preenchido durante a liquidação da despesa deixou de existir.</td>
+<td>T</td>
+<td>AQS - Depósito Compulsório</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0187</td>
+<td>Tabela que armazena informações dos tributos orçamentários: esta tabela na verdade representa uma equivalência DE-PARA entre códigos tributários da arrecadação integrada (SIAT) e as classificações de receita.
+Esta tabela é a única dentre todas no sistema FIPLAN que o controle não é apenas por exercício, mas também por mês, permitindo que se tenham equivalências diferentes de um mês para outro.
+</td>
+<td>T</td>
+<td>Tributo Orçamentário</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0188</td>
+<td>Tabela que armazena informações do documento DAC - Documento de Aviso de Crédito.</td>
+<td>T</td>
+<td>DAC</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0189</td>
+<td>Tabela que armazena informações dos valores de um documento DAC - Documento de Aviso de Crédito.</td>
+<td>T</td>
+<td>DAC - Valores</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0190</td>
+<td>Tabela que armazena informações do documento de estorno DAC - Documento de Aviso de Crédito.</td>
+<td>T</td>
+<td>DAC - Estorno</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0191</td>
+<td>Tabela que armazena informações do DARE Orçamentário: o DARE Orçamentário é um espelho do DARE - Documento de Arrecadação Estadual - recebido a partir da integração FIPLAN x SIAT, todavia, já com todas as conversões para as equivalências orçamentárias que foram obtidas a partir da tabela de tributo orçamentário, bem como as repartições conforme definições da tabela de vinculação da receita.</td>
+<td>T</td>
+<td>DARE Orçamentário</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0196</td>
+<td>Tabela que armazena informações dos pareceres durante a tramitação de créditos adicionais (FUNCIONALIDADE NÃO UTILIZADA NO FIPLAN-RR).</td>
+<td>T</td>
+<td>RSS - Estorno</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0197</td>
+<td>Tabela que compõe a base contábil do sistema FIPLAN, denominada CONTÁBIL CONSOLIDADO DE ABERTURA. Esta tabela armazena os saldos iniciais do exercício, de forma consolidada.</td>
+<td>T</td>
+<td>Contábil Consolidado de Abertura</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0198</td>
+<td>Tabela que armazena informações do documento BLO - Bloqueio da Despesa Orçamentária.</td>
+<td>T</td>
+<td>BLO</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0199</td>
+<td>Tabela que armazena informações do documento de estorno BLO - Bloqueio da Despesa Orçamentária.</td>
+<td>T</td>
+<td>BLO - Estorno</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0200</td>
+<td>Tabela que armazena informações do documento de estorno ALO - Alteração Orçamentária da Despesa.</td>
+<td>T</td>
+<td>ALO - Estorno</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0201</td>
+<td>Tabela que armazena informações de resumo do processamento do documento AVR - Aviso de Receita. Traz além do status de data/hora e usuário do processamento, um PDF com resumo do que foi processado e status desse processamento.</td>
+<td>T</td>
+<td>AVR - Resumo do Processamento</td>
+	</tr>
+	<tr>
+<td>Previsão da Receita</td>
+<td>ACWTB0202</td>
+<td>Tabela que armazena informações do documento ALR - Alteração Orçamentária da Receita (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>ALR</td>
+	</tr>
+	<tr>
+<td>Previsão da Receita</td>
+<td>ACWTB0203</td>
+<td>Tabela que armazena informações do documento de estorno ALR - Alteração Orçamentária da Receita.</td>
+<td>T</td>
+<td>ALR - Estorno</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0204</td>
+<td>Tabela que armazena informações do resumo de processamento do DARE. Além da data/hora e usuário de processamento, armazena também um PDF com o resumo de cada processamento executado, seja ele automático ou manual.</td>
+<td>T</td>
+<td>DARE - Resumo do Processamento</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - OPE</td>
+<td>ACWTB0205</td>
+<td>Tabela que armazena informações das regularizações orçamentárias do documento OPE - Ordem de Pagamento Especial. A proposta aqui é permitir identificar por OPE qual a LIQ Escritural que regularizou, subsidiando possíveis operações futuras de estorno da regularização da OPE.</td>
+<td>T</td>
+<td>OPE - Regularização</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0206</td>
+<td>Tabela que armazena informações dos valores do DARE Tributário, por código de tributo.</td>
+<td>T</td>
+<td>DARE Tributário - Valores</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0207</td>
+<td>Tabela que armazena os grupos de usuários FIPLAN. Um grupo de usuário tem como finalidade agregar um conjunto de usuários para fins de envio de malotes eletrônicos pelo sistema.</td>
+<td>T</td>
+<td>Grupo de Usuário</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0208</td>
+<td>Tabela associativa entre grupos de usuários e seus usuários.</td>
+<td>T</td>
+<td>Usuário x Grupo de Usuário</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0209</td>
+<td>Tabela que armazena as dotações anulantes e/ou suplementantes de um documento ALO - Alteração  Orçamentária da Despesa.</td>
+<td>T</td>
+<td>ALO - Anulação/Suplementação</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0211</td>
+<td>Tabela que armazena as autorizações e quantidade de dias retroativos/futuros por rotina de documentos, das autorizações de datas retroativas/futuras concedidas por usuário.</td>
+<td>T</td>
+<td>Autorização/Usuário x Rotina</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0212</td>
+<td>Tabela associativa que armazena as UOs e UGs autorizadas para datas retroativas/futuras, no registro das autorizações de datas retroativas/futuras por usuário.</td>
+<td>T</td>
+<td>Autorização/Usuário x UO/UG</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0213</td>
+<td>Tabela associativa que armazena os usuários autorizados para datas retroativas/futuras, no registro das autorizações de datas retroativas/futuras por usuário.</td>
+<td>T</td>
+<td>Autorização/Usuário x Usuário</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0214</td>
+<td>Tabela que armazena as autorizações de datas retroativas/futuras concedidas por rotina de documento.
+As autorizações de data de retroativa/futura, a partir da funcionalidade no sistema FIPLAN, podem ser registradas de duas maneiras:
+1.	Por USUÁRIO, o registro de autorização (ACWTB0170) terá associativas nas tabelas ACWTB0211 (autorização x datas retroativas/futuras concedidas por rotinas de documentos); ACWTB0212 (autorização x UO/UG autorizadas) e ACWTB0213 (autorização x usuários autorizados).
+2.	Por rotina de documento, que sistematicamente é aplicada a todos os usuários que não possuem autorização de datas retroativas/futuras por usuário, onde o registro de autorização (ACWTB0214) terá associativas na tabela ACWTB0169 (autorização x datas retroativas/futuras concedidas por rotinas de documentos).
+</td>
+<td>T</td>
+<td>Autorização/Rotina</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0215</td>
+<td>Tabela que compõe a base contábil do sistema FIPLAN, denominada CONTÁBIL CONSOLIDADO MENSAL. Esta tabela armazena os valores consolidados dos lançamentos contábeis agrupados pela chave a seguir, gravando os valores nas colunas dos meses extraídos a partir da data do documento:
+"	Exercício	 (CD_EXERCICIO)
+"	Código da UO + UG 	 (ID_UNIDADE_GESTORA)
+"	Código da Conta Contábil 	 (IDEN_CONTA_CONTABIL)
+"	Nº Conta Corrente Contábil 	 (NUMR_CONTA_CORRENTE)
+"	Mês Contábil 	 (FLAG_MES_CONTABIL)
+
+A persistência nesta tabela é feita através de trigger no banco de dados, para toda ação de INSERT, DELETE ou UPDATE ocorrida na tabela de Lançamentos Contábeis Analíticos (ACWTB0088).
+</td>
+<td>T</td>
+<td>Contábil Consolidado Mensal</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0216</td>
+<td>Tabela que armazena informações dos programas de incentivos fiscais do Estado. Seu papel atualmente é apenas gerar uma lista de valores que alimente o parâmetro contábil "II", que até o Plano de Contas utilizado em 2013, servia para representar nas contas de controle, os diferentes programas de incentivos fiscais concedidos pelo Estado, identificando na conta ainda o tipo de indústria e o segmento da receita tributária. Apesar de existir no FIPLAN-RR, é uma herança legada do FIPLAN-MT que nunca foi aplicada ao Estado de Roraima.</td>
+<td>T</td>
+<td>Programa de Incentivo Fiscal</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0217</td>
+<td>Tabela que armazena informações dos segmentos da receita tributária estadual. Seu papel atualmente é apenas gerar uma lista de valores que alimente o parâmetro contábil "JJ", que até o Plano de Contas utilizado em 2013, servia para representar nas contas de controle, os diferentes segmentos da receita tributária dos programas de incentivos fiscais concedidos pelo Estado. Apesar de existir no FIPLAN-RR, é uma herança legada do FIPLAN-MT que nunca foi aplicada ao Estado de Roraima.</td>
+<td>T</td>
+<td>Segmento da Receita Tributária</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0218</td>
+<td>Tabela que armazena informações dos tipos de indústria. Seu papel atualmente é apenas gerar uma lista de valores que alimente o parâmetro contábil "LL", que até o Plano de Contas utilizado em 2013, servia para representar nas contas de controle, os diferentes tipos de indústria dos programas de incentivos fiscais concedidos pelo Estado. Apesar de existir no FIPLAN-RR, é uma herança legada do FIPLAN-MT que nunca foi aplicada ao Estado de Roraima.</td>
+<td>T</td>
+<td>Tipo de Indústria</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0219</td>
+<td>Tabela que armazena informações dos fundos estaduais que concedem incentivos fiscais. Seu papel atualmente é apenas gerar uma lista de valores que alimente o parâmetro contábil "NN", que até o Plano de Contas utilizado em 2013, servia para representar nas contas de controle, os diferentes fundos que concediam incentivos fiscais. Apesar de existir no FIPLAN-RR, é uma herança legada do FIPLAN-MT que nunca foi aplicada ao Estado de Roraima.</td>
+<td>T</td>
+<td>Fundos</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT) Gerencial</td>
+<td>ACWTB0220</td>
+<td>Tabela que armazena informações do PAT Gerencial. O PAT Gerencial representa o PAT modificado no decorrer do exercício, em decorrências das movimentações orçamentárias ocorridas por meio dos créditos adicionais. A obrigatoriedade do seu preenchimento é parametrizada por indicativos nas tabelas de Unidade Orçamentária e PAOE: os processos só exigirão atualização prévia do PAT Gerencial quando a UO solicitante e sua ação estiverem com seus indicativos iguais a "Sim" (MÓDULO IMPLANTADO MAS NÃO UTILIZADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>PAT Gerencial</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT) Gerencial</td>
+<td>ACWTB0221</td>
+<td>Tabela que armazena informações das ações de um PAT Gerencial (MÓDULO IMPLANTADO MAS NÃO UTILIZADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>PAT Gerencial - Ação</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT) Gerencial</td>
+<td>ACWTB0222</td>
+<td>Tabela que armazena informações das medidas das ações do PAT Gerencial (MÓDULO IMPLANTADO MAS NÃO UTILIZADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>PAT Gerencial - Medida</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT) Gerencial</td>
+<td>ACWTB0223</td>
+<td>Tabela que armazena informações das tarefas (plano de ação), ligadas às medidas das ações do PAT Gerencial (MÓDULO IMPLANTADO MAS NÃO UTILIZADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>PAT Gerencial - Tarefa</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT) Gerencial</td>
+<td>ACWTB0224</td>
+<td>Tabela que armazena informações da memória de cálculo do PAT Gerencial (MÓDULO IMPLANTADO MAS NÃO UTILIZADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>PAT Gerencial - Memória de Cálculo</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0225</td>
+<td>Tabela que armazena informações dos malotes eletrônicos enviados e recebidos pelos usuários do sistema FIPLAN. O módulo de malote eletrônico, além desta tabela também possui outras tabelas associadas:
+"	Usuários/Destinatários do malote eletrônico	(ACWTB0242)
+</td>
+<td>T</td>
+<td>Malote Eletrônico</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0226</td>
+<td>Tabela que armazena informações do documento NDD - Nota de Destaque (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>NDD</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0227</td>
+<td>Tabela que armazena informações do documento de estorno NDD - Nota de Destaque (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>NDD - Estorno</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0228</td>
+<td>Tabela que armazena informações do documento de estorno DND - Devolução da Nota de Destaque.</td>
+<td>T</td>
+<td>DND</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0229</td>
+<td>Tabela que armazena informações do documento de estorno DND - Devolução da Nota de Destaque.</td>
+<td>T</td>
+<td>DND - Estorno</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0231</td>
+<td>Tabela que armazena informações do documento BAD - Baixa de Adiantamento.</td>
+<td>T</td>
+<td>BAD</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0232</td>
+<td>Tabela que armazena informações dos comprovantes do gasto (notas fiscais, comprovantes e/ou recibos) dos suprimentos de fundos, associados a um documento BAD - Baixa de Adiantamento.</td>
+<td>T</td>
+<td>BAD - Despesa</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0233</td>
+<td>Tabela que armazena informações do documento de estorno BAD - Baixa de Adiantamento.</td>
+<td>T</td>
+<td>BAD - Estorno</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0234</td>
+<td>Tabela que armazena informações dos processos de suprimento de fundos em análise/avaliação pelo Tribunal de Contas do Estado. A proposta desta tabela é controle o envio/entrega de processos para análise pelo TCE, e fazer a gestão do retorno da avaliação, lançamento de possíveis pendências na prestação de contas e sua posterior regularização.
+Nas situações em que inconformidades são registradas nesta tabela, geram impeditivo ao servidor para recebimento de novos suprimentos de fundos.
+</td>
+<td>T</td>
+<td>BAD - Processo TCE</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0235</td>
+<td>Tabela que armazena o detalhamento dos comprovantes de despesa da prestação de contas dos suprimentos de fundos do documento BAD - Baixa de Adiantamento, classificados ao nível de subelemento da despesa.</td>
+<td>T</td>
+<td>BAD - Valores/Subelemento</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0242</td>
+<td>Tabela que armazena informações dos destinatários do malote eletrônico.</td>
+<td>T</td>
+<td>Malote Eletrônico - Destinatário do Malote</td>
+	</tr>
+	<tr>
+<td>Contabilidade</td>
+<td>ACWTB0243</td>
+<td>Tabela que armazena informações do documento IRC - Informações Relevantes ao Contador. Este "documento" não faz parte da execução orçamentária, e foi criado com o propósito de armazenar informações relativas aos processos sistêmicos de relevância ao contador da Unidade Orçamentária ou do gestor central, que poderão influenciar no fechamento dos balancetes, balanço ou na prestação de contas de cada UO. 
+A ideia que é de que a IRC funcione como uma "agenda" centralizando todas as pendências, e à medida que são solucionadas, sua regularização também seja registradas em sistema.
+</td>
+<td>T</td>
+<td>IRC</td>
+	</tr>
+	<tr>
+<td>Contabilidade</td>
+<td>ACWTB0246</td>
+<td>Tabela que armazena informações das equações de auditoria aplicadas ao processamento da auditoria eletrônica.</td>
+<td>T</td>
+<td>Equação de Auditoria</td>
+	</tr>
+	<tr>
+<td>Contabilidade</td>
+<td>ACWTB0247</td>
+<td>Tabela que armazena informações das contas contábeis de uma equação de auditoria.</td>
+<td>T</td>
+<td>Equação de Auditoria - Conta Contábil</td>
+	</tr>
+	<tr>
+<td>Contabilidade</td>
+<td>ACWTB0248</td>
+<td>Tabela que armazena as equações dos balanços e demonstrativos aplicáveis à prestação de contas das Unidades Orçamentárias. As tabelas que compõem a equação do balanço são:
+"	Balanço	 (ACWTB0248)
+"	Equação	 (ACWTB0249)
+"	Coluna	 (ACWTB0250)
+"	Contas contábeis por coluna	 (ACWTB0251)
+"	Exceções de tratamento de CCC por conta contábil	 (ACWTB0258)
+As equações dos balanços só foram aplicadas nos demonstrativos de prestação de contas - Anexos da Lei 4.320/64 - até o exercício de 2013: devido à reestruturação dos relatórios e da dinâmica de regras aplicadas na composição do balanço, as equações foram transferidas para o código-fonte da aplicação a partir de 2014.
+</td>
+<td>T</td>
+<td>Equação do Balanço</td>
+	</tr>
+	<tr>
+<td>Contabilidade</td>
+<td>ACWTB0249</td>
+<td>Tabela que armazena informações das equações dos balanços.</td>
+<td>T</td>
+<td>Equação do Balanço - Equação</td>
+	</tr>
+	<tr>
+<td>Contabilidade</td>
+<td>ACWTB0250</td>
+<td>Tabela que armazena informações das equações dos balanços.</td>
+<td>T</td>
+<td>Equação do Balanço - Coluna</td>
+	</tr>
+	<tr>
+<td>Contabilidade</td>
+<td>ACWTB0251</td>
+<td>Tabela que armazena informações das contas contábeis das colunas de uma equação do balanço.</td>
+<td>T</td>
+<td>Equação do Balanço - Conta Contábil</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0257</td>
+<td>Tabela que compõe a base contábil do sistema FIPLAN, denominada CONTÁBIL CONSOLIDADO MENSAL DA PROGRAMAÇÃO FINANCEIRA. Esta tabela armazena os valores consolidados dos lançamentos contábeis agrupados pela chave a seguir, gravando os valores nas colunas dos meses extraídos das posições 14-15 da conta corrente contábil:
+"	Exercício	 (CD_EXERCICIO)
+"	Código da UO + UG 	 (ID_UNIDADE_GESTORA)
+"	Código da Conta Contábil 	 (IDEN_CONTA_CONTABIL)
+"	Nº Conta Corrente Contábil 	 (NUMR_CONTA_CORRENTE)
+
+Na tabela de conta contábil (ACWTB0032), as contas contábeis de controle da programação financeira cuja CCC é "UO + UG + Fonte de Recursos + Grupo de Despesa + Mês" (e o mês corresponde às posições 14-15 da CCC) são sinalizadas a partir do campo FLAG_ATUALIZA_SALDO_PROG_FINAN desta tabela, quais contas terão seu saldo consolidado nesta tabela.
+A persistência nesta tabela é feita através de trigger no banco de dados, para toda ação de INSERT, DELETE ou UPDATE ocorrida na tabela de Lançamentos Contábeis Analíticos (ACWTB0088) para as contas onde campo supracitado é igual a 856 (Sim).
+</td>
+<td>T</td>
+<td>Contábil Consolidado Mensal - PF</td>
+	</tr>
+	<tr>
+<td>Contabilidade</td>
+<td>ACWTB0258</td>
+<td>Tabela que armazena tratamento de exceções das equações dos balanços, tratadas por conta corrente contábil (CCC).</td>
+<td>T</td>
+<td>Equação do Balanço - CCC</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0261</td>
+<td>Tabela que armazena informações da OSD - Ordem de Serviço de Diárias. Uma OSD detalha informações relativas às diárias concedidas pelo Estado de Roraima aos servidores e colaboradores eventuais, e que irão agregar ao processo de execução orçamentária destas despesas.</td>
+<td>T</td>
+<td>OSD - Diárias</td>
+	</tr>
+	<tr>
+<td>Contabilidade</td>
+<td>ACWTB0262</td>
+<td>Tabela que armazena informações relativas ao processamento das equações de auditoria. O objetivo é manter informações do status de processamento e do PDF resultante do mesmo.</td>
+<td>T</td>
+<td>Auditoria Eletrônica - Processamento</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>ACWTB0263</td>
+<td>Tabela que armazena os IPs de todos os servidores de aplicação executando a aplicação FIPLAN interligados em cluster, bem como identifica qual dos servidores é o servidor "master", responsável pelas verificações de saldo na inclusão dos documentos FIPLAN.</td>
+<td>T</td>
+<td>IP Cluster/Motor</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0264</td>
+<td>Tabela que armazena informações do documento IRP - Inscrição de Restos a Pagar.</td>
+<td>T</td>
+<td>IRP</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0265</td>
+<td>Tabela que armazena informações do documento de estorno IRP - Inscrição de Restos a Pagar.</td>
+<td>T</td>
+<td>IRP - Estorno</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0266</td>
+<td>Tabela que armazena informações dos saldos de direitos a receber com entidades devedoras, somados aos aportes financeiros liberados pelo ordenador de despesa e/ou pela SEFAZ para respaldar a inscrição em restos a pagar. Toda liberação é registrada utilizando a chave: UO + UG + Fonte de Recursos.
+Os valores liberados sobre os saldos de direitos são informados e alimentados tomando por base os direitos a receber já contabilizados no sistema; já os aportes financeiros liberados para inscrição de RP sem lastro financeiro, tanto por responsabilidade do ordenador de despesa como também por autorização da SEFAZ, armazenam seus valores nesta tabela mesma também disparam, em cada liberação, a geração de um documento LRP - Nota de Liberação de Saldo de Restos a Pagar.
+</td>
+<td>T</td>
+<td>IRP - Saldo de Direitos</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0267</td>
+<td>Tabela que armazena informações das devoluções dos processos de créditos adicionais por transposição de recursos (TIPO 102) às Unidades Orçamentárias anulantes</td>
+<td>T</td>
+<td>Crédito Adicional - UO Anulante (sugerida)</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA)</td>
+<td>ACWTB0268</td>
+<td>Tabela que armazena informações do PPA - Plano Plurianual.</td>
+<td>T</td>
+<td>PPA</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA)</td>
+<td>ACWTB0269</td>
+<td>Tabela que armazena informações das ações (PAOE x UO) de um PPA - Plano Plurianual.</td>
+<td>T</td>
+<td>PPA - Ação</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA)</td>
+<td>ACWTB0270</td>
+<td>Tabela que armazena informações referentes à regionalização das ações do PPA - Plano Plurianual.</td>
+<td>T</td>
+<td>PPA - Ação - Região de Planejamento</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA)</td>
+<td>ACWTB0271</td>
+<td>Tabela que armazena informações das medidas do PPA - Plano Plurianual.</td>
+<td>T</td>
+<td>PPA - Medida</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA)</td>
+<td>ACWTB0272</td>
+<td>Tabela que armazena informações dos valores das medidas do PPA - Plano Plurianual.</td>
+<td>T</td>
+<td>PPA - Medida - Valores</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0273</td>
+<td>Tabela que armazena as contas parâmetros do Plano de Contas. Uma conta parâmetro identifica a forma em que uma conta ou mais contas contábeis podem ser representadas nos lançamentos automáticos.</td>
+<td>T</td>
+<td>Conta Parâmetro</td>
+	</tr>
+	<tr>
+<td>FOPAG Integrada</td>
+<td>ACWTB0274</td>
+<td>Tabela que armazena informações da equivalência entre Unidades Orçamentárias: FIPLAN x Folha de Pagamento.</td>
+<td>T</td>
+<td>Folha Integrada - Equivalência de UO</td>
+	</tr>
+	<tr>
+<td>FOPAG Integrada</td>
+<td>ACWTB0275</td>
+<td>Tabela que armazena informações das rubricas da Folha de Pagamento (FOPAG) Integrada, bem como atributos relativos à equivalência orçamentária (rubricas de vantagem/desconto) e financeira (rubricas de desconto para definição e cálculo das consignações).</td>
+<td>T</td>
+<td>Folha Integrada - Rubrica</td>
+	</tr>
+	<tr>
+<td>FOPAG Integrada</td>
+<td>ACWTB0276</td>
+<td>Tabela que armazena informações da Folha de Pagamento Integrada, recebidas via carga e/ou Webservice do sistema de gestão da folha de pagamento.</td>
+<td>T</td>
+<td>Folha Integrada - Tabela/Integração</td>
+	</tr>
+	<tr>
+<td>FOPAG Integrada</td>
+<td>ACWTB0277</td>
+<td>Tabela que armazena informações da extração da Folha de Pagamento (FOPAG) Integrada.</td>
+<td>T</td>
+<td>Folha Integrada - Extração</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0278</td>
+<td>Tabela que armazena o detalhamento dos valores inscritos em restos a pagar processados de um documento IRP - Inscrição de Restos a Pagar.</td>
+<td>T</td>
+<td>IRP - Valores Processados</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0279</td>
+<td>Tabela que armazena informações do log da aplicação. Representa a tabela principal, de ocorrência de uma ação de UPDATE ou DELETE nas tabelas do banco de dados, associados à chave primária (PK) de cada tabela. O detalhamento das informações atualizadas ou excluídas fica armazenada na tabela ACWTB0280.</td>
+<td>T</td>
+<td>Log</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0280</td>
+<td>Tabela que armazena informações do detalhamento de um registro de log do sistema, relativo às ações de UPDATE e DELETE.</td>
+<td>T</td>
+<td>Log - Detalhamento por Campo</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0281</td>
+<td>Tabela que armazena informações do documento LRP - Nota de Liberação de Saldo de Restos a Pagar. Representa os valores liberados como aporte para inscrição de RP sem lastro financeiro.</td>
+<td>T</td>
+<td>LRP</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0284</td>
+<td>VERIFICAR</td>
+<td>T</td>
+<td>Ação</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0285</td>
+<td>VERIFICAR</td>
+<td>T</td>
+<td>Duração da Ação</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>ACWTB0287</td>
+<td>Tabela associativa entre natureza de despesa x tipo de despesa.</td>
+<td>T</td>
+<td>Natureza da Despesa x Tipo de Despesa</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0287</td>
+<td>Tabela associativa entre natureza de despesa x tipo de despesa.</td>
+<td>T</td>
+<td>Natureza da Despesa x Tipo de Despesa</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0290</td>
+<td>Tabela que armazena informações do usuário responsável pela conformidade de usuário em cada Unidade Orçamentária.</td>
+<td>T</td>
+<td>Responsável pela Conformidade</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0291</td>
+<td>VERIFICAR</td>
+<td>T</td>
+<td>Monitoramento - Ação</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0292</td>
+<td>VERIFICAR</td>
+<td>T</td>
+<td>Monitoramento - Ação - Região</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0293</td>
+<td>Tabela que armazena informações de uma restrição da ação no módulo de monitoramento.</td>
+<td>T</td>
+<td>Monitoramento - Ação - Restrição</td>
+	</tr>
+	<tr>
+<td>Relatório de Avaliação</td>
+<td>ACWTB0294</td>
+<td>Tabela que armazena informações da agenda do programa no Módulo de Monitoramento (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Agenda do Programa</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0295</td>
+<td>Tabela que armazena informações dos programas do monitoramento (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Monitoramento - Programa</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0296</td>
+<td>Tabela que armazena informações da situação do programa do monitoramento, para registro das restrições e encaminhamentos (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Monitoramento - Programa - Restrição</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0297</td>
+<td>Tabela que armazena os perfis de conformidade de usuário. Os perfis de conformidade de usuário definem os diferentes níveis aplicados à conformidade de usuário (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Perfil de Conformidade de Usuário</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>ACWTB0298</td>
+<td>Tabela que armazena informações dos indicadores do monitoramento, com informações dos índices apurados no exercício (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Programa de Governo - Histórico de Alteração</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0299</td>
+<td>Tabela que armazena as mensagens de aviso do sistema enviadas on-line a todos os usuários do FIPLAN. O conteúdo gravado nesta tabela é sempre temporário: assim que vence o prazo de expiração, o registro é excluído da tabela.</td>
+<td>T</td>
+<td>Mensagem de Aviso</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>ACWTB0300</td>
+<td>Tabela criada com o propósito de concentrar informações de todos os documentos gerados em todas as transações contábeis. A proposta é de armazena apenas algumas informações básicas:
+"	Exercício
+"	Transação Contábil
+"	Nº Documento
+"	Nº Documento Estornado
+"	Data do Documento
+"	Valor do Documento
+"	Indicativo de situação
+"	Tipo de Documento
+"	Usuário de inclusão
+
+Estas informações tinham como propósito inicial subsidiar a emissão de um relatório: FIP017 - Relatório de Produtividade por Usuário; a alimentação desta tabela seria feita através de triggers, em todos os documentos do FIPLAN, persistindo na tabela ACWTB0300 a cada ação de INSERT, DELETE ou UPDATE nos documentos do FIPLAN. Por dificuldades na finalização do da proposta/projeto, as triggers não foram concluídas e as que haviam sido concluídas foram desabilitadas, e o projeto foi abandonado. O segundo propósito, que também caiu por terra, era de permitir utilizar esta tabela como log de usuário para informações específicas da inclusão de documentos.
+</td>
+<td>T</td>
+<td>Documento FIPLAN</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0301</td>
+<td>Tabela que armazena informações do documento TRP - Transferência de Restos a Pagar. Este documento deixou de ser utilizado a partir do exercício de 2014 em razão da implantação do Plano de Contas Aplicado ao Setor Público (PCASP), que passa a agregar um conjunto de contas contábeis para inscrição de RP no exercício, que são transpostas para as contas que carregam o saldo para execução do RP, que representa justamente o papel antes aplicado ao documento TRP.</td>
+<td>T</td>
+<td>TRP</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0302</td>
+<td>Tabela que armazena os valores por conta corrente contábil do documento TRP - Transferência de Restos a Pagar. Cada documento TRP efetuar transferência de saldos de uma única conta contábil (origem) para outra (destino), em todas as suas contas correntes contábeis (CCC).</td>
+<td>T</td>
+<td>TRP - Valores</td>
+	</tr>
+	<tr>
+<td>Outros Documentos</td>
+<td>ACWTB0303</td>
+<td>Tabela que armazena informações do documento de estorno TRP - Transferência de Restos a Pagar.
+
+IMPORTANTE:
+Esta tabela apresenta uma falha de implementação a partir do momento que criou no documento de estorno um indicativo de situação: é uma informação desnecessária, haja vista que a situação de todo registro da tabela ser um "Documento de Estorno".
+</td>
+<td>T</td>
+<td>TRP - Estorno</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0304</td>
+<td>Tabela que armazena informações da conformidade de usuário, registrada por usuário pelo responsável pela conformidade (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Conformidade de Usuário</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0305</td>
+<td>Tabela que armazena informações dos históricos de validação das ações do monitoramento (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Monitoramento - Ação - Histórico/Validação</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA) - Revisão</td>
+<td>ACWTB0306</td>
+<td>Tabela que armazena informações das revisões do Plano Plurianual (PPA) por programa de governo.</td>
+<td>T</td>
+<td>PPA Revisão</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA) - Revisão</td>
+<td>ACWTB0307</td>
+<td>Tabela que armazena informações das ações da revisão do PPA.</td>
+<td>T</td>
+<td>PPA Revisão - Ação</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA) - Revisão</td>
+<td>ACWTB0308</td>
+<td>Tabela que armazena informações das ações da revisão do PPA por região de planejamento.</td>
+<td>T</td>
+<td>PPA Revisão - Região</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA) - Revisão</td>
+<td>ACWTB0309</td>
+<td>Tabela que armazena informações das medidas da revisão do PPA.</td>
+<td>T</td>
+<td>PPA Revisão - Medida</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA) - Revisão</td>
+<td>ACWTB0310</td>
+<td>Tabela que armazena informações dos valores das medidas da revisão do PPA.</td>
+<td>T</td>
+<td>PPA Revisão - Medida - Valores</td>
+	</tr>
+	<tr>
+<td>Contingenciamento</td>
+<td>ACWTB0311</td>
+<td>Tabela que armazena os históricos das ações de planejamento relativas ao contingenciamento e/ou liberação do contingenciamento do orçamento, seja ele individual por dotação orçamentária ou linear de acordo com critérios de filtragem informados pelo usuário.
+A ação descrita aqui desencadeia a geração do documento CTG - Contingenciamento do Orçamento, que armazena cada documento CTG gerado por dotação orçamentária em tabela específica (ACWTB0368).
+</td>
+<td>T</td>
+<td>Contingenciamento - Histórico</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0312</td>
+<td>Tabela que armazena informações dos tributos federais utilizados no detalhamento das faturas por GPS, DARF e DARF Simples.</td>
+<td>T</td>
+<td>Tributo Federal</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0313</td>
+<td>Tabela que armazena informações das consignações relativas à leilão de mercadorias apreendidas no documento RDE - Registro da Receita Extra-Orçamentária.</td>
+<td>T</td>
+<td>RDE - Consignação</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Extraorçamentária</td>
+<td>ACWTB0314</td>
+<td>Tabela que armazena informações dos pagamentos de um documento NOE - Solicitação de Pagamento Extra-Orçamentário.</td>
+<td>T</td>
+<td>NOE - Pagamento</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0315</td>
+<td>Tabela associativa que armazena o Bloqueio de Execução por Ato e/ou Fato Contábil (AFC).</td>
+<td>T</td>
+<td>Bloqueio de Execução - AFC</td>
+	</tr>
+	<tr>
+<td>Execução por Lista (NOBLIST/DOTLIST/NEXTLIST)</td>
+<td>ACWTB0316</td>
+<td>Tabela que armazena informações da DOTLIST - Lista de Dotações.</td>
+<td>T</td>
+<td>DOTLIST</td>
+	</tr>
+	<tr>
+<td>Execução por Lista (NOBLIST/DOTLIST/NEXTLIST)</td>
+<td>ACWTB0317</td>
+<td>Tabela que armazena informações das dotações orçamentárias de uma DOTLIST - Lista de Dotações.</td>
+<td>T</td>
+<td>DOTLIST - Credor</td>
+	</tr>
+	<tr>
+<td>Execução por Lista (NOBLIST/DOTLIST/NEXTLIST)</td>
+<td>ACWTB0318</td>
+<td>Tabela que armazena informações das consignações das dotações de uma DOTLIST - Lista de Dotações.</td>
+<td>T</td>
+<td>DOTLIST - Consignação</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0320</td>
+<td>Tabela que armazena informações das categorias de custos, associadas aos agrupamentos de custos - tabela utilizada pelo Módulo de Custos do FIPLAN (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Categoria de Custo</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0321</td>
+<td>Tabela que armazena informações dos itens de custo, associados às categorias de custos - tabela que compõe o Módulo de Custos do FIPLAN (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Item de Custo</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0322</td>
+<td>Tabela que armazena informações dos indicadores de custo - tabela que compõe o Módulo de Custos do FIPLAN (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Indicador de Custo</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0324</td>
+<td>Tabela que armazena as exceções permitidas para inversão por conta corrente contábil - CCC, associadas às contas contábeis escrituradas do Plano de Contas.</td>
+<td>T</td>
+<td>Conta Contábil - Exceção CCC</td>
+	</tr>
+	<tr>
+<td>Lançamentos Contábeis</td>
+<td>ACWTB0329</td>
+<td>Tabela que armazena informações dos históricos de desativação das contas contábeis no Plano de Contas.</td>
+<td>T</td>
+<td>Conta Contábil - Histórico de Desativação</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>ACWTB0330</td>
+<td>Tabela que armazena a consolidação das despesas consolidadas a partir do PAT - Plano Anual de Trabalho - registradas na UG centralizadora (0000), por esfera e categoria econômica, para subsidiar a geração do documento ABR - Abertura da Receita, nas fontes do Tesouro Estadual, gerando cotas para a Unidade Orçamentária.</td>
+<td>T</td>
+<td>Consolidação por Esfera/Categoria</td>
+	</tr>
+	<tr>
+<td>Previsão da Receita</td>
+<td>ACWTB0330</td>
+<td>Tabela que armazena a consolidação das despesas consolidadas a partir do PAT - Plano Anual de Trabalho - registradas na UG centralizadora (0000), por esfera e categoria econômica, para subsidiar a geração do documento ABR - Abertura da Receita, nas fontes do Tesouro Estadual, gerando cotas para a Unidade Orçamentária.</td>
+<td>T</td>
+<td>Consolidação por Esfera/Categoria</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0350</td>
+<td>Tabela que armazena as equivalências entre item de custo x subelemento da despesa - utilizada no Módulo de Custos do FIPLAN (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Equivalência - Item de Custo x Subelemento</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0354</td>
+<td>Tabela que armazena as conformidades documentais de acordo com os perfis de conformidade. Esta tbela é utilizada pelo Módulo de Conformidade Documental (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Perfil de Conformidade Documental</td>
+	</tr>
+	<tr>
+<td>Créditos Adicionais</td>
+<td>ACWTB0355</td>
+<td>Tabela que armazena histórico das alterações dos identificadores de contrapartida. Esta funcionalidade automatiza procedimentos dos créditos adicionais, da geração da NPO/NPD até a efetivação do processo de crédito adicional.</td>
+<td>T</td>
+<td>Alteração do Identificador de Contrapartida</td>
+	</tr>
+	<tr>
+<td>Legislação</td>
+<td>ACWTB0361</td>
+<td>Tabela que armazena os códigos identificadores do amparo legal, utilizados nas funcionalidades do FIPLAN para agrupar e exibir em lista os itens do amparo legal que fundamentam legalmente os procedimentos descritos nas funcionalidades onde são utilizados.</td>
+<td>T</td>
+<td>Código Identificador do Amparo Legal</td>
+	</tr>
+	<tr>
+<td>Contingenciamento</td>
+<td>ACWTB0369</td>
+<td>Tabela que armazena informações do documento de estorno CTG - Contingenciamento. Apesar de existir a tabela do estorno, os procedimentos implantado no FIPLAN-RR para contingenciamento e liberação do contingenciamento não estornam os documentos já gerados, mas sim, geram documentos CTG que contingenciam e que liberam o orçamento, dispensando o uso do estorno.</td>
+<td>T</td>
+<td>CTG - Estorno</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0371</td>
+<td>Tabela que armazena informações dos documentos fiscais, vinculado ao documento LIQ - Liquidação. Esta tabela só foi utilizada até o exercício de 2013: com a implantação do PCASP e dos novos documentos AQS/ELI, os documentos fiscais passaram a ser vinculados ao empenho e não mais à liquidação, tornando esta tabela e sua funcionalidade inutilizados a partir de 2014.</td>
+<td>T</td>
+<td>LIQ - Documento Fiscal</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0372</td>
+<td>Tabela que armazena os códigos dos municípios utilizados no Sistema Integrado de Administração Tributária - SIAT, utilizada na integração FIPLAN x SIAT - Arrecadação (MÓDULO NÃO IMPLANTADO NO FIPLAN-RR).</td>
+<td>T</td>
+<td>Município SIAT</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 2º Estágio</td>
+<td>ACWTB0403</td>
+<td>Tabela que armazena informações do documento AQS - Aquisição de Bens Patrimoniais.</td>
+<td>T</td>
+<td>AQS</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 2º Estágio</td>
+<td>ACWTB0404</td>
+<td>Tabela que armazena informações dos valores por subelemento do documento AQS - Aquisição de Bens Patrimoniais.</td>
+<td>T</td>
+<td>AQS - Valores</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 2º Estágio</td>
+<td>ACWTB0405</td>
+<td>Tabela que armazena informações do documento de estorno AQS - Aquisição de Bens Patrimoniais.</td>
+<td>T</td>
+<td>AQS - Estorno</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0410</td>
+<td>Tabela que armazena informações das categorias de credores. A categoria do credor, no início do projeto FIPLAN, era representada por três domínios em tabela, sendo um para cada tipo de cadastro de credor (PF, PJ, IG): com o passar dos anos foi tomada a decisão de se criar uma tabela com as categorias, para permitir a parametrização de alguns atributos no cadastro de credores, bem como permitir a criação de novas categorias sem a necessidade da intervenção de TI.</td>
+<td>T</td>
+<td>Categoria do Credor</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0413</td>
+<td>Tabela que armazena informações dos sócios e/ou administradores que compõem o QSA (Quadro de Sócios e/ou Administradores) de um credor.</td>
+<td>T</td>
+<td>Credor - QSA</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0414</td>
+<td>Tabela que armazena informações dos bloqueios/impedimentos da execução orçamentárias, associadas a um ou mais pessoas físicas. O propósito desta tabela é controlar bloqueios na execução orçamentária para os réus registrados no bloqueio e também para todas as empresas das quais seja(m) sócio(s) e/ou administrador(es).</td>
+<td>T</td>
+<td>Impedimento Judicial</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0415</td>
+<td>Tabela que armazena os réus constantes num bloqueio/impedimento da execução orçamentária por decisão judicial.</td>
+<td>T</td>
+<td>Impedimento Judicial - Réu</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0416</td>
+<td>Tabela que armazena informações do documento DRI - Direitos a Receber pela Integração.</td>
+<td>T</td>
+<td>DRI</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0417</td>
+<td>Tabela que armazena informações do documento DRF - Documento de Renúncia Fiscal.</td>
+<td>T</td>
+<td>DRF</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 2º Estágio</td>
+<td>ACWTB0418</td>
+<td>Tabela que armazena informações do documento ELI - Despesa Em Liquidação.</td>
+<td>T</td>
+<td>ELI</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 2º Estágio</td>
+<td>ACWTB0419</td>
+<td>Tabela que armazena informações do documento de estorno ELI - Despesa Em Liquidação.</td>
+<td>T</td>
+<td>ELI - Estorno</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0422</td>
+<td>Tabela que armazena informações do documento ABP - Abertura do PPA.</td>
+<td>T</td>
+<td>ABP</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0423</td>
+<td>Tabela que armazena informações do documento de estorno ABP - Abertura do PPA</td>
+<td>T</td>
+<td>ABP - Estorno</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0427</td>
+<td>Tabela que armazena informações do resultado do processamento dos documentos DRI - Direitos a Receber pela Integração. Grava, dentre outras informações, um log com data/hora e usuário de processamento e também um arquivo PDF contendo o resultado do processamento.</td>
+<td>T</td>
+<td>DRI - Processamento</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 2º Estágio</td>
+<td>ACWTB0438</td>
+<td>Tabela que armazena informações do detalhamento de valores por subelemento de um registro recebimento pela AQS/Integração, que no processamento irá disparar a geração de um documento AQS - Aquisição de Bens Patrimoniais.</td>
+<td>T</td>
+<td>AQS - Integração - Detalhamento</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0439</td>
+<td>Tabela que armazena informações do documento AFR - Alteração de Fonte de Restos a Pagar.</td>
+<td>T</td>
+<td>AFR</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0440</td>
+<td>Tabela que armazena informações dos valores de detalhamento por conta contábil de direito, para as alterações de fonte de RP liberadas sobre o saldo de direitos em um documento AFR - Alteração de Fonte de Restos a Pagar.</td>
+<td>T</td>
+<td>AFR - Valores</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0441</td>
+<td>Tabela que armazena informações do documento de estorno AFR - Alteração de Fonte de Restos a Pagar.</td>
+<td>T</td>
+<td>AFR - Estorno</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0443</td>
+<td>Tabela que armazena informações da consolidação do PPA, utilizada como insumo para geração dos documentos ABP (Abertura do PPA) e ALP (Alteração do PPA).</td>
+<td>T</td>
+<td>Consolidação do PPA</td>
+	</tr>
+	<tr>
+<td>Plano Plurianual (PPA)</td>
+<td>ACWTB0443</td>
+<td>Tabela que armazena informações da consolidação do PPA, utilizada como insumo para geração dos documentos ABP (Abertura do PPA) e ALP (Alteração do PPA).</td>
+<td>T</td>
+<td>Consolidação do PPA</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0444</td>
+<td>Tabela que armazena informações das exceções cadastradas no sistema para autorização automática das liberações de pagamento pela SEFAZ. Todas as exceções sinalizam situações em que o sistema não exigirá que a SEFAZ autorize as LIQ/NOE para sua liberação pelo liberador de pagamento.</td>
+<td>T</td>
+<td>Liberação SEFAZ - Exceção</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0445</td>
+<td>Tabela que armazena informações das exceções de liberação de pagamento SEFAZ por UO/UG.</td>
+<td>T</td>
+<td>Liberação SEFAZ - Exceção - UO/UG</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0446</td>
+<td>Tabela que armazena as exceções de liberação de pagamento SEFAZ por fonte de recurso.</td>
+<td>T</td>
+<td>Liberação SEFAZ - Exceção - Fonte de Recurso</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0447</td>
+<td>Tabela que armazena atributos das exceções de liberação SEFAZ por grupo de despesa.</td>
+<td>T</td>
+<td>Liberação SEFAZ - Exceção - Grupo de Despesa</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0448</td>
+<td>Tabela que armazena informações das exceções de liberação de pagamento SEFAZ por elemento da despesa.</td>
+<td>T</td>
+<td>Liberação SEFAZ - Exceção - Elemento da Despesa</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0449</td>
+<td>Tabela que armazena informações das exceções de liberação SEFAZ por tipo de conta bancária (CBA).</td>
+<td>T</td>
+<td>Liberação SEFAZ - Exceção - CBA</td>
+	</tr>
+	<tr>
+<td>Fixação da Despesa</td>
+<td>ACWTB0452</td>
+<td>Tabela que armazena informações do documento de estorno ALP - Alteração do PPA.</td>
+<td>T</td>
+<td>ALP - Estorno</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>ACWTB0454</td>
+<td>Tabela associativa entre natureza de despesa x representação contábil. Cada elemento de despesa possui uma representação contábil única, podendo esta ter ou não parâmetros contábeis. As naturezas de despesa relativas a elemento de exercícios anteriores (92) permitem a associação de todos os demais elementos à natureza, definindo uma representação para cada elemento de despesa representado como despesa do exercício anterior.</td>
+<td>T</td>
+<td>Natureza da Despesa x Representação</td>
+	</tr>
+	<tr>
+<td>Execução por Lista (NOBLIST/DOTLIST/NEXTLIST)</td>
+<td>ACWTB0460</td>
+<td>Tabela que armazena as informações da NEXLIST - Lista de Credores. A NEXLIST gera execução extraorçamentária através de NOE/NEX.</td>
+<td>T</td>
+<td>NEXLIST</td>
+	</tr>
+	<tr>
+<td>Execução por Lista (NOBLIST/DOTLIST/NEXTLIST)</td>
+<td>ACWTB0461</td>
+<td>Tabela que armazena informações dos credores que compõem uma Lista de Credores - NEXLIST.</td>
+<td>T</td>
+<td>NEXLIST - Credor</td>
+	</tr>
+	<tr>
+<td>Execução por Lista (NOBLIST/DOTLIST/NEXTLIST)</td>
+<td>ACWTB0462</td>
+<td>Tabela que armazena informações das consignações dos credores de uma NEXLIST - Lista de Credores.</td>
+<td>T</td>
+<td>NEXLIST - Consignação</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0465</td>
+<td>Tabela que armazena informações das exceções de liberação SEFAZ por fato extra-orçamentário.</td>
+<td>T</td>
+<td>Liberação SEFAZ - Exceção - AFC</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>ACWTB0470</td>
+<td>Tabela que armazena o histórico das senhas de acesso ao sistema FIPLAN-RR que já foram utilizadas pelo usuário, de maneira criptografada. O objetivo é permitir ativar mecanismo de segurança que impede a reutilização das últimas senhas definidas pelo usuário.</td>
+<td>T</td>
+<td>Histórico de Alteração de Senhas</td>
+	</tr>
+	<tr>
+<td>Convênios</td>
+<td>ACWTB0600</td>
+<td>Tabela que armazena informações dos convênios de receita (ingresso de transferências de convênios federais no Estado) e de despesa (descentralização de recursos estaduais aos municípios e outras entidades de classe).</td>
+<td>T</td>
+<td>Convênio</td>
+	</tr>
+	<tr>
+<td>Convênios</td>
+<td>ACWTB0602</td>
+<td>Tabela que armazena informações da execução do convênio, desde a entrega até à homologação da prestação de contas.</td>
+<td>T</td>
+<td>Convênio - Execução</td>
+	</tr>
+	<tr>
+<td>Convênios</td>
+<td>ACWTB0605</td>
+<td>Tabela que armazena informações do plano de aplicação dos convênios de receita e despesa, associado ao cadastro do convênio (ACWTB0600).</td>
+<td>T</td>
+<td>Convênio - Plano de Aplicação</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0606</td>
+<td>Tabela que armazena o CPF e nome dos credores de TFD (Tratamento Fora do Domicílio), utilizados como base histórica no momento do preenchimento dos dados do beneficiário do TFD, na fase de liquidação da despesa, ao incluir o documento LIQ - Liquidação.</td>
+<td>T</td>
+<td>Credor - TFD</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 3º Estágio</td>
+<td>ACWTB0606</td>
+<td>Tabela que armazena o CPF e nome dos credores de TFD (Tratamento Fora do Domicílio), utilizados como base histórica no momento do preenchimento dos dados do beneficiário do TFD, na fase de liquidação da despesa, ao incluir o documento LIQ - Liquidação.</td>
+<td>T</td>
+<td>Credor - TFD</td>
+	</tr>
+	<tr>
+<td>Relatório de Avaliação</td>
+<td>ACWTB0608</td>
+<td>Tabela que armazena informações das restrições do programa no Relatório de Avaliação. O termo RAG refere-se ao mesmo módulo no sistema FIPLAN-MT (Relatório da Ação Governamental).</td>
+<td>T</td>
+<td>Relatório de Avaliação - Programa/Restrição</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0609</td>
+<td>Tabela que armazena informações dos documentos de estorno DRF - Documento de Renúncia Fiscal.</td>
+<td>T</td>
+<td>DRF - Estorno</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0610</td>
+<td>Tabela que armazena informações do documento DRC - Direitos a Receber por Competência.</td>
+<td>T</td>
+<td>DRC</td>
+	</tr>
+	<tr>
+<td>Realização da Receita</td>
+<td>ACWTB0611</td>
+<td>Tabela que armazena informações do documento de estorno DRC - Direitos a Receber por Competência.</td>
+<td>T</td>
+<td>DRC - Estorno</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0612</td>
+<td>Tabela que armazena informações da finalidade de pagamento, informados na emissão dos empenhos da despesa do FUNDEB - Fundo de Manutenção e Desenvolvimento da Educação Básica e de Valorização dos Profissionais da Educação.</td>
+<td>T</td>
+<td>Finalidade de Pagamento</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0613</td>
+<td>Tabela que armazena as associações das finalidades de pagamento do FUNDEB com seus respectivos elementos da despesa, para fins de filtragem das finalidades quando da emissão das notas de empenho da despesa (EMP).</td>
+<td>T</td>
+<td>Finalidade de Pagamento x Elemento</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 2º Estágio</td>
+<td>ACWTB0614</td>
+<td>Tabela que armazena os documentos fiscais (notas fiscais e outros), das despesas não patrimoniais com comprovação fiscal.</td>
+<td>T</td>
+<td>EMP - Documento Fiscal</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0615</td>
+<td>Tabela que armazena o número dos processos físicos da despesa do Estado.</td>
+<td>T</td>
+<td>Processo</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0616</td>
+<td>Tabela que armazena informações dos tipos de contrato, utilizado pelo Cadastro de Contratos.</td>
+<td>T</td>
+<td>Tipo de Contrato</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>ACWTB0617</td>
+<td>Tabela que armazena os históricos dos motivos de cancelamento dos impedimentos judiciais por credor, associado ao Cadastro de Credores e que gera impacto direto no processo de execução orçamentária.</td>
+<td>T</td>
+<td>Impedimento Judicial - Revogação</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0618</td>
+<td>Tabela que armazena dos grupos do bem. Esta tabela é uma réplica das informações dos sistemas SIGELP e SIGELM, de gestão de materiais e patrimônio do Estado de Roraima, utilizada para fins de equivalência orçamentária com a tabela subelemento da despesa, e utilizada na integração do sistema FIPLAN com os sistemas citados.</td>
+<td>T</td>
+<td>Grupo do Bem</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0619</td>
+<td>Tabela que armazena a equivalência entre subelemento de despesa (FIPLAN) e o grupo do bem, entidade existente nos sistemas SIGELP/SIGELM, de gestão de materiais e patrimônio do Estado de Roraima.</td>
+<td>T</td>
+<td>Equivalência Grupo do Bem x Subelemento</td>
+	</tr>
+	<tr>
+<td>Integração FIPLAN x Cruviana</td>
+<td>ACWTB0620</td>
+<td>Tabela que armazena informações da conta contábil Cruviana. Esta tabela é uma réplica da tabela de contas contábeis que compõem o Plano de Contas do Sistema Cruviana (Thema Informática), utilizado pelos órgãos do TJRR e ALERR como seus SIAFIC's (Sistemas Integrados de Administração Financeira e Contábil). Foi criada com o objetivo de fazer a equivalência contábil entre os planos de contas do sistema FIPLAN x Cruviana, para fins de integração.</td>
+<td>T</td>
+<td>Conta Cruviana</td>
+	</tr>
+	<tr>
+<td>Integração FIPLAN x Cruviana</td>
+<td>ACWTB0621</td>
+<td>Tabela que armazena informações das equivalências contábeis entre planos de contas do sistema FIPLAN x Cruviana, para fins de integração.</td>
+<td>T</td>
+<td>Equivalência FIPLAN x Cruviana</td>
+	</tr>
+	<tr>
+<td>Integração FIPLAN x Cruviana</td>
+<td>ACWTB0622</td>
+<td>Tabela que armazena informações das contas correntes contábeis para carga do processamento contábil mensal pela integração FIPLAN x Cruviana, associadas às equivalências contábeis entre os planos de contas.Esta tabela apresenta uma estrutura não implantada em produção, pois teve seu projeto abortado antes de sua conclusão.</td>
+<td>T</td>
+<td>Equivalência FIPLAN x Cruviana - CCC</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0623</td>
+<td>Tabela que armazena informações das atas de registro de preços.
+
+IMPORTANTE:
+Existe uma falha de estruturação desta tabela, ocasionada em razão das várias mudanças ocorridas no módulo de Contratos desde a implantação do FIPLAN: o campo FLAG_ORIGEM_REGISTRO_PRECOS existente nesta tabela é uma informação que deve ser eliminada, haja vista que o mesmo FLAG foi reestruturado para obtenção a partir da FK IDEN_ENTIDADE_ORIGEM, que representa a tabela de entidades de origem dos registros de preços: o referido campo deveria ter sido excluído na ocasião da implantação da tabela de entidades de origem do registro de preços.
+</td>
+<td>T</td>
+<td>Ata de Registro de Preços</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0624</td>
+<td>Tabela que armazena informações os itens dos lotes de uma ata de registro de preços.</td>
+<td>T</td>
+<td>Ata de Registro de Preços - Item de Lote</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0625</td>
+<td>Tabela que armazena informações dos caronas das atas de registro de preços.</td>
+<td>T</td>
+<td>Ata de Registro de Preços - Carona</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0626</td>
+<td>Tabela que armazena informações dos representantes das contratantes, informadas nos contratos de fornecimento de bens e serviços. Esta tabela é alimentada pelo Cadastro de Contratos. </td>
+<td>T</td>
+<td>Contrato - Representante da Contratante</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0627</td>
+<td>Tabela que armazena informações dos fiscais dos contratos de fornecimento de bens e serviços. Esta tabela é utilizada no Cadastro de Contratos.</td>
+<td>T</td>
+<td>Contrato - Fiscal</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0628</td>
+<td>Tabela que armazena os períodos de suspensão dos contratos de fornecimento de bens e serviços.</td>
+<td>T</td>
+<td>Contrato - Suspensão</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0629</td>
+<td>Tabela que armazena informações complementares referentes às condições de entrega dos materiais de consumo, associadas aos empenhos vinculados a contratos de fornecimento de bens e serviços.
+Apesar de esta tabela ainda existir e estar implementada no FIPLAN-RR, a implantação do Novo Módulo de Contratos não utiliza esta tabela, pois sua utilização dependerá do desmembramento e criação de novas tabelas/estruturas de dados para contemplar outras situações além da condição de entrega de material (ACWTB0629) e de serviços (ACWTB0630), a exemplo dos contratos com compra de bens móveis, obras e outros.
+</td>
+<td>T</td>
+<td>Contrato - Condição de Entrega do Material</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0630</td>
+<td>Tabela que armazena informações complementares referentes às condições de realização dos serviços contratados e vinculados a empenhos que possuem contratos de fornecimento de bens e serviços controlados pelo Módulo de Contratos.
+Apesar de esta tabela ainda existir e estar implementada no FIPLAN-RR, a implantação do Novo Módulo de Contratos não utiliza esta tabela, pois sua utilização dependerá do desmembramento e criação de novas tabelas/estruturas de dados para contemplar outras situações além da condição de entrega de material (ACWTB0629) e de serviços (ACWTB0630), a exemplo dos contratos com compra de bens móveis, obras e outros.
+</td>
+<td>T</td>
+<td>Contrato - Condição de Entrega do Serviço</td>
+	</tr>
+	<tr>
+<td>Integração FIPLAN x Cruviana</td>
+<td>ACWTB0633</td>
+<td>Tabela que armazena o histórico dos processamentos do resultado contábil mensal de balancetes e de execução da receita/despesa a partir da integração FIPLAN x Cruviana. O propósito é registrar os 12 (doze) meses do ano em que este processamento foi carregado contabilmente no sistema.</td>
+<td>T</td>
+<td>Resultado Contábil Mensal</td>
+	</tr>
+	<tr>
+<td>Integração FIPLAN x Cruviana</td>
+<td>ACWTB0634</td>
+<td>Tabela que armazena o histórico dos estornos de processamento do resultado contábil mensal de balancetes e de execução da receita/despesa a partir da integração FIPLAN x Cruviana.</td>
+<td>T</td>
+<td>Resultado Contábil Mensal - Estorno</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0637</td>
+<td>Tabela que armazena o resultado do processamento dos registros da tabela ACWTB0636 (Integração CBP), recebidas a partir da integração FIPLAN x SIGELP.</td>
+<td>T</td>
+<td>CBP - Processamento</td>
+	</tr>
+	<tr>
+<td>MÓDULOS NÃO IMPLANTADOS</td>
+<td>ACWTB0639</td>
+<td>Tabela que armazena informações do resultado do processamento da BMC/Integração, gravando dados do processamento e PDF do resumo do processamento.</td>
+<td>T</td>
+<td>BMC - Processamento</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>ACWTB0641</td>
+<td>Tabela que armazena informações dos contratos da dívida pública. Estes contratos tem como propósito subsidiar a definição do parâmetro "DP", que corresponde ao código do contrato da dívida pública. Estas informações irão também subsidiar a emissão do Anexo XVI da Lei 4.320/64.</td>
+<td>T</td>
+<td>Contrato da Dívida Pública</td>
+	</tr>
+	<tr>
+<td>Integração FIPLAN x Cruviana</td>
+<td>ACWTB0642</td>
+<td>Tabela que armazena informações de lançamentos contábeis complementares gerados como réplicas de lançamentos no processamento do resultado contábil mensal da integração FIPLAN x Cruviana.</td>
+<td>T</td>
+<td>Equivalência FIPLAN x Cruviana - Complementar</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0646</td>
+<td>Tabela que armazena informações das entidades de origem do registro de preços, para fins de utilização no Cadastro de Atas de Registro de Preços.</td>
+<td>T</td>
+<td>Entidade de Origem da Ata de Registro de Preços</td>
+	</tr>
+	<tr>
+<td>Contratos</td>
+<td>ACWTB0647</td>
+<td>Tabela que armazena os lotes das atas de registros de preços.</td>
+<td>T</td>
+<td>Ata de Registro de Preços - Lote</td>
+	</tr>
+	<tr>
+<td>Integração FIPLAN x Cruviana</td>
+<td>ACWTB0648</td>
+<td>Tabela que armazena informações das contas contábeis e CCC complementares alimentadas no pré-processamento do resultado contábil mensal pela Integração FIPLAN x Cruviana.</td>
+<td>T</td>
+<td>Pré-Processamento Cruviana</td>
+	</tr>
+	<tr>
+<td>Integração FIPLAN x Cruviana</td>
+<td>ACWTB0649</td>
+<td>Tabela que armazena informações das contas contábeis por UO, utilizadas para registros do pré-processamento do resultado contábil mensal da Integração FIPLAN x Cruviana.</td>
+<td>T</td>
+<td>Pré-Processamento Cruviana - Conta Contábil</td>
+	</tr>
+	<tr>
+<td>Integração FIPLAN x Cruviana</td>
+<td>ACWTB0650</td>
+<td>Tabela que armazena o detalhamento de valores por conta corrente contábil (CCC), dos lançamentos complementares do pré-processamento do resultado contábil mensal da Integração FIPLAN x Cruviana.</td>
+<td>T</td>
+<td>Pré-Processamento Cruviana - Valores/Conta</td>
+	</tr>
+	<tr>
+<td>SICONFI</td>
+<td>ACWTB0801</td>
+<td>Tabela que armazena informações das contas contábeis SICONFI, utilizadas para fins de equivalência DE-PARA e composição da Matriz de Saldos Contábeis.</td>
+<td>T</td>
+<td>Conta SICONFI</td>
+	</tr>
+	<tr>
+<td>SICONFI</td>
+<td>ACWTB0802</td>
+<td>Tabela que armazena as informações complementares (IC's) conta contábil SICONFI. Estas IC's serão utilizadas em associação com suas contas contábeis SICONFI na composição da Matriz de Saldos Contábeis.</td>
+<td>T</td>
+<td>Conta SICONFI - IC</td>
+	</tr>
+	<tr>
+<td>Classificação Institucional</td>
+<td>ACWTB0803</td>
+<td>Tabela que armazena informações do Poder/Órgão SICONFI, utilizado na equivalência DE-PARA que define a IC "PO" na composição da Matriz de Saldos Contábeis.</td>
+<td>T</td>
+<td>Poder/Órgão SICONFI</td>
+	</tr>
+	<tr>
+<td>SICONFI</td>
+<td>ACWTB0803</td>
+<td>Tabela que armazena informações do Poder/Órgão SICONFI, utilizado na equivalência DE-PARA que define a IC "PO" na composição da Matriz de Saldos Contábeis.</td>
+<td>T</td>
+<td>Poder/Órgão SICONFI</td>
+	</tr>
+	<tr>
+<td>SICONFI</td>
+<td>ACWTB0804</td>
+<td>Tabela que armazena informações das naturezas de receita SICONFI, utilizadas na equivalência DE-PARA que definem a IC "NR" na composição da Matriz de Saldos Contábeis.</td>
+<td>T</td>
+<td>Natureza de Receita SICONFI</td>
+	</tr>
+	<tr>
+<td>SICONFI</td>
+<td>ACWTB0805</td>
+<td>Tabela que armazena informações das fontes de recurso SICONFI, utilizadas na equivalência DE-PARA que definem a IC "FR" na composição da Matriz de Saldos Contábeis.</td>
+<td>T</td>
+<td>Fonte de Recurso SICONFI</td>
+	</tr>
+	<tr>
+<td>SICONFI</td>
+<td>ACWTB0806</td>
+<td>Tabela que armazena informações da geração da Matriz de Saldos Contábeis (MSC). </td>
+<td>T</td>
+<td>MSC - Geração</td>
+	</tr>
+	<tr>
+<td>SICONFI</td>
+<td>ACWTB0807</td>
+<td>Tabela que armazena informações da homologação da Matriz de Saldos Contábeis (MSC). </td>
+<td>T</td>
+<td>MSC - Homologação</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>AREA_POLITICA</td>
+<td>Tabela que armazena as dimensões estratégicas de gestão. O Este termo "Área Política de Atuação do Governo" foi adotado pelo FIPLAN-MT, mas modificado pela equipe gestora do FIPLAN-RR quando da implantação do sistema no Estado de Roraima.</td>
+<td>T</td>
+<td>Dimensão Estratégica de Gestão</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>CATEGORIA_ECONOMICA</td>
+<td>Tabela que armazena as categorias econômicas da receita e da despesa.</td>
+<td>T</td>
+<td>Categoria Econômica</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>CATEGORIA_INVESTIMENTO</td>
+<td>Tabela que armazena as categorias de investimento. As categorias de investimento são representadas apenas ao nível de planejamento, apenas para fins de avaliação e análise do orçamento previsto. É definida na memória de cálculo do Plano Anual de Trabalho (PAT).</td>
+<td>T</td>
+<td>Categoria de Investimento</td>
+	</tr>
+	<tr>
+<td>Credores</td>
+<td>CIDADE</td>
+<td>Tabela que armazena os nomes dos municípios brasileiros. O código do município segue classificação adotada pelo Instituto Brasileiro de Geografia e Estatística (IBGE).</td>
+<td>T</td>
+<td>Município</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>CONFIGURACAO_GERAL</td>
+<td>Tabela que armazena informações dos parâmetros de configuração geral do sistema. Estes parâmetros estão intimamente ligados a ações de segurança e gestão de acessos e usuários do sistema.</td>
+<td>T</td>
+<td>Configuração Geral</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>DOMINIO</td>
+<td>Tabela que armazena os domínios em tabela, criados para delimitar os tipos de valores que podem aparecer em atributos das tabelas do banco de dados do FIPLAN-RR. No início do projeto, alguns desses atributos foram criados como tabelas de dados, sendo uma tabela para cada atributo; no entanto, ao perceber que isso iria criar um conjunto com dezenas de tabelas, optou-se por criar uma única tabela de domínios, com vários itens de domínio associados a cada domínio, justamente constituindo os tipos de valores/opções permitidos em cada atributo.</td>
+<td>T</td>
+<td>Domínio</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>DOTACAO_ORCAMENTARIA</td>
+<td>Tabela que armazena as dotações orçamentárias da despesa. Dotações Orçamentárias são valores monetários autorizados, consignados na Lei Orçamentária Anual (LOA) para atender a uma determinada programação orçamentária; é toda e qualquer verba prevista como despesa em orçamentos públicos e destinada a fins específicos.</td>
+<td>T</td>
+<td>Dotação Orçamentária</td>
+	</tr>
+	<tr>
+<td>Elaboração da Receita</td>
+<td>ELABORACAO_RECEITA</td>
+<td>Tabela que armazena informações da elaboração de receita.</td>
+<td>T</td>
+<td>Elaboração da Receita</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>ELEMENTO_DESPESA</td>
+<td>Tabela que armazena as informações dos elementos da despesa.</td>
+<td>T</td>
+<td>Elemento da Despesa</td>
+	</tr>
+	<tr>
+<td>Parâmetros</td>
+<td>EXERCICIO</td>
+<td>Tabela que armazena atributos e parâmetros de gestão por exercício, tratado no sistema FIPLAN como tabela de parâmetros orçamentários. Os parâmetros orçamentários constituem atributos utilizados para nortear os processos de planejamento e execução orçamentária da receita e da despesa.</td>
+<td>T</td>
+<td>Parâmetro Orçamentário (Exercício)</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>EXPRESSAO_VALIDACAO</td>
+<td>Tabela criada e relacionada ao acesso ao sistema, mas não há informações acerca de sua utilizada. Inclusive, não existem registros nesta tabela.</td>
+<td>T</td>
+<td>&nbsp;</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>FONTE_RECEITA</td>
+<td>Tabela que armazena informações das fontes de receita. As fontes de receita representam o segundo dígito do código da classificação de receita, ou natureza da receita.</td>
+<td>T</td>
+<td>Fonte de Receita</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>FONTE_RECURSO</td>
+<td>Tabela que armazena as informações das fontes de recurso.</td>
+<td>T</td>
+<td>Fonte de Recurso</td>
+	</tr>
+	<tr>
+<td>Elaboração da Receita</td>
+<td>FONTE_RECURSO</td>
+<td>Tabela que armazena as informações das fontes de recurso.</td>
+<td>T</td>
+<td>Fonte de Recurso</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>FUNCAO</td>
+<td>Tabela que armazena informações das funções de governo. As funções de governo hoje obedecem à classificação única e padronizada a todos entes da Federação, em conformidade com o que preconiza a Portaria Interministerial STN/SOF Nº 163/2001.</td>
+<td>T</td>
+<td>Função de Governo</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>FUNCIONAMENTO_FONTE</td>
+<td>Tabela que armazena informações dos funcionamentos das fontes de recursos. O funcionamento é um tipificador das fontes de recursos, utilizado para permitir a definição de roteiros contábeis diferenciados para as fontes, de acordo com sua origem e aplicabilidade dos recursos. Os valores permitidos para o campo do funcionamento da fonte na tabela de fonte de recurso, apesar de existirem em tabela, também possuem um domínio definido na tabela DOMINIO; ainda assim, há processos implementados nas classes do FIPLAN e também em views de banco de dados utilizando as duas estruturas, apesar de ambas convergirem para a mesma informação.</td>
+<td>T</td>
+<td>Funcionamento da Fonte</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>GRUPO_DESPESA</td>
+<td>Tabela que armazena informações dos grupos de despesa.</td>
+<td>T</td>
+<td>Grupo de Despesa</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>GRUPO_RECURSO</td>
+<td>Tabela que armazena os grupos de recursos do FIPLAN: cada grupo de recurso, em regra, representa uma funcionalidade do sistema, que será disponibilizada aos usuários por meio do vínculo entre grupos de recursos e perfis, perfis e usuários.</td>
+<td>T</td>
+<td>Grupo de Recurso</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>GRUPO_RECURSO_RECURSO</td>
+<td>Tabela associativa entre grupos de recursos e seus recursos de sistema.</td>
+<td>T</td>
+<td>Recurso x Grupo de Recurso</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>HISTORICO_BLOQUEIO</td>
+<td>Tabela que armazena os históricos dos bloqueios ocorridos no usuário negocial, seja por alteração cadastral ou por número máximo de tentativas de login sem sucesso.</td>
+<td>T</td>
+<td>Usuário - Histórico do Bloqueio</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>HORARIO</td>
+<td>Tabela que armazena os horários do dia para acesso ao sistema FIPLAN.</td>
+<td>T</td>
+<td>Horário</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>IDENTIFICADOR_CONTRA_PARTIDA</td>
+<td>Tabela que armazena os identificadores de uso, que são atributos que compõe a dotação orçamentária da despesa. Quando este atributo foi criado, seu papel era permitir segregar o orçamento comprometido como contrapartidas de convênio das demais dotações orçamentárias justamente para permitir a definição de regras negociam na aplicação que impedissem o remanejamento ou uso do orçamento de contrapartida com ações que não fossem a aplicação junto aos convênios celebrados pelo Estado junto ao Governo Federal. Até então, a tabela era chamada de identificador de contrapartida.
+A partir de 2014, esta tabela passa a se chamar de Tabela de Identificador de Uso, pois passa a agregar também a função de identificar, além das dotações orçamentárias de contrapartidas de convênios, também as dotações orçamentárias criadas em razão das Emendas Parlamentares durante o processo de aprovação da Lei Orçamentária Anual (LOA). O objetivo neste caso também era permitir a aplicação de regras negociais sobre o orçamento das Emendas Parlamentares.
+</td>
+<td>T</td>
+<td>Identificador de Uso (IDU)</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>INDICADOR_PROGRAMA_GOVERNO</td>
+<td>INDICADOR_PROGRAMA_GOVERNO</td>
+<td>T</td>
+<td>Indicador do Programa de Governo</td>
+	</tr>
+	<tr>
+<td>Apoio BD/Desenvolvimento</td>
+<td>ITEM_DOMINIO</td>
+<td>Tabela que armazena os itens de domínios em tabela, criados para delimitar os tipos de valores que podem aparecer em atributos das tabelas do banco de dados do FIPLAN-RR. No início do projeto, alguns desses atributos foram criados como tabelas de dados, sendo uma tabela para cada atributo; no entanto, ao perceber que isso iria criar um conjunto com dezenas de tabelas, optou-se por criar uma única tabela de domínios, com vários itens de domínio associados a cada domínio, justamente constituindo os tipos de valores/opções permitidos em cada atributo.</td>
+<td>T</td>
+<td>Item-Domínio</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>MEDIDA</td>
+<td>Tabela que armazena informações das medidas de uma ação, na composição do PAT - Plano Anual de Trabalho. É nesta tabela que se associa no PAT a informação da Unidade Setorial de Planejamento (USP).</td>
+<td>T</td>
+<td>PAT - Medida</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>MEMORIA_CALCULO</td>
+<td>Tabela que armazena informações da memória de cálculo de uma tarefa, trazendo informações detalhadas acerca do desembolso fixado, com informações da natureza da despesa, fonte de recurso, região de planejamento e identificador de uso.</td>
+<td>T</td>
+<td>PAT - Memória de Cálculo</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>MESES_DESEMBOLSO</td>
+<td>Tabela que armazena os valores orçamentários, distribuídos mês a mês, de cada memória de cálculo do PAT. Uma memória de cálculo tem de 01 (um) a 12 (doze) registros nesta tabela, de acordo com os meses utilizados para desembolso da despesa fixada.</td>
+<td>T</td>
+<td>PAT - Meses/Desembolso</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>MODALIDADE_APLICACAO</td>
+<td>Tabela que armazena as modalidades de aplicação da despesa.</td>
+<td>T</td>
+<td>Modalidade de Aplicação</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>NATUREZA_DESPESA</td>
+<td>Tabela que armazena informações das naturezas da despesa. A natureza da despesa é um agregador de elementos de despesa com as mesmas características quanto ao objeto de gasto, que traz as seguintes informações:
+"	Categoria econômica
+"	Grupo de despesa
+"	Modalidade de aplicação
+"	Elemento da despesa
+"	Subelemento da despesa
+</td>
+<td>T</td>
+<td>Natureza da Despesa</td>
+	</tr>
+	<tr>
+<td>Elaboração da Receita</td>
+<td>NATUREZA_RECEITA</td>
+<td>Tabela que armazena as classificações da receita, ou naturezas de receita.</td>
+<td>T</td>
+<td>Natureza da Receita</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>OBJETIVO_ESTRATEGICO</td>
+<td>Tabela que armazena as dimensões estratégicas de governo aplicadas aos programas. Na implantação do sistema, esta tabela era chamada objetivo estratégico, mas por decisões de gestão foi alterada para dimensão estratégica para o FIPLAN-RR, razão pela qual os campos permanecem com referência à antiga terminologia.</td>
+<td>T</td>
+<td>Dimensão Estratégica</td>
+	</tr>
+	<tr>
+<td>Classificação Institucional</td>
+<td>ORGAO</td>
+<td>Tabela armazena informações dos órgãos do Estado.</td>
+<td>T</td>
+<td>Órgão</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>PAOE</td>
+<td>Tabela que armazena as ações de governo, distribuídas nos Projetos, Atividades e Operações Especiais (P/A/O/E) do Estado.</td>
+<td>T</td>
+<td>PAOE</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>PERFIL</td>
+<td>Tabela que armazena os perfis de usuários. Cada perfil permite o vínculo com um conjunto de grupos de recursos, que caracterizam cada funcionalidade do menu da aplicação. Um perfil, por sua vez, é associado a um usuário, dando acesso a este usuário às funcionalidades definidas nos grupos de recursos vinculados ao perfil.</td>
+<td>T</td>
+<td>Perfil</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>PERFIL_GRUPO_RECURSO</td>
+<td>Tabela associativa entre um perfil e seus grupos de recursos.</td>
+<td>T</td>
+<td>Perfil x Grupo de Recurso</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>PERGUNTA</td>
+<td>Tabela que armazena perguntas e respostas de segurança de acesso do usuário. As respostas são criptografas em campo do banco de dados, assim como a senha na tabela USUARIO.</td>
+<td>T</td>
+<td>Pergunta</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>PRODUTO</td>
+<td>Tabela que armazena os produtos das ações de governo.</td>
+<td>T</td>
+<td>Produto</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>PROGRAMA_GOVERNO</td>
+<td>Tabela que armazena informações dos programas de governo do Estado.</td>
+<td>T</td>
+<td>Programa de Governo</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>PROGRAMA_GOVERNO_INDICADOR</td>
+<td>Tabela associativa entre os programas de governo e indicadores de programas de governo.</td>
+<td>T</td>
+<td>Programa de Governo x Indicador</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>PTA</td>
+<td>Tabela que armazena informações do PAT - Plano Anual de Trabalho. Cada PAT detalha a despesa de um determinado programa de governo, em suas diferentes ações, estas, por sua vez, ligadas às Unidades Orçamentárias do Estado.
+O termo "PTA" vem de Plano de Trabalho Anual, denominação atribuída ao PAT pelo Estado de Mato Grosso, e que trouxe a tabela na implantação do FIPLAN-RR utilizando o legado do FIPLAN-MT.
+</td>
+<td>T</td>
+<td>PAT</td>
+	</tr>
+	<tr>
+<td>Elaboração da Receita</td>
+<td>RECEITA</td>
+<td>Tabela que armazena informação das receitas previstas, associadas a uma elaboração de receita.</td>
+<td>T</td>
+<td>Receita</td>
+	</tr>
+	<tr>
+<td>Elaboração da Receita</td>
+<td>RECEITA_MES</td>
+<td>Tabela que armazena informação das receitas previstas mês a mês, associadas a um registro de receita da elaboração de receita.</td>
+<td>T</td>
+<td>Receita - Mês</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>RECURSO</td>
+<td>Tabela que armazena os recursos de sistema. Um recurso está intimamente ligado ao desenvolvimento da aplicação FIPLAN, aos métodos implementados nas classes "java", uma vez que cada recurso representa um método ou conjunto de métodos que executam uma determinada ação dentro de uma funcionalidade do sistema; uma funcionalidade, para seu funcionamento efetivo, pode necessitar de um ou mais recursos de sistema, dando origem ao que denominamos de grupo de recurso.</td>
+<td>T</td>
+<td>Recurso</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>SUBELEMENTO_DESPESA</td>
+<td>Tabela que armazena as informações dos subelementos da despesa. O subelemento da despesa, representa um nível mais detalhado da despesa que o subelemento, que no modelo de execução orçamentária do FIPLAN é representado apenas para a despesa liquidada, e registrada no momento da liquidação.
+O desdobramento da despesa ao nível de subelemento também pode ser feito em fase de planejamento, sem contudo vincular ou obrigar a execução orçamentária neste mesmo nível de detalhamento.
+</td>
+<td>T</td>
+<td>Subelemento da Despesa</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>SUBFUNCAO</td>
+<td>Tabela que armazena informações das subfunções de governo. As subfunções de governo hoje obedecem à classificação única e padronizada a todos entes da Federação, em conformidade com o que preconiza a Portaria Interministerial STN/SOF Nº 163/2001.</td>
+<td>T</td>
+<td>Subfunção de Governo</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>TAREFA</td>
+<td>Tabela que armazena informações das tarefas de uma medida, na composição do PAT - Plano Anual de Trabalho.</td>
+<td>T</td>
+<td>Tarefa</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>TETO_MES</td>
+<td>Tabela que armazena informações do teto orçamentário mensal, segregado por UO, fonte de recurso e com valores para despesas de pessoal e extra-pessoal, associada à tabela TETO_ORCAMENTARIO, que define o valor destes tetos anualmente.</td>
+<td>T</td>
+<td>Teto Orçamentário - Mês</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>TETO_ORCAMENTARIO</td>
+<td>Tabelas que armazena os tetos orçamentários por Unidade Orçamentária, que são limitadores aplicados às Unidades Orçamentárias na elaboração da receita. Além de estabelecer o teto para fixação das despesas por UO, determina ainda em cada qual o valor destinado a despesas com pessoal (grupo de despesa = 1) e extra-pessoal (demais grupos de despesa).
+Nesta tabela são armazenadas apenas informações do teto anual.
+</td>
+<td>T</td>
+<td>Teto Orçamentário</td>
+	</tr>
+	<tr>
+<td>Execução da Despesa Orçamentária - 1º Estágio</td>
+<td>TIPO_DESPESA</td>
+<td>Tabela que armazena os tipos de despesa. O tipo de despesa é um atributo que não existe na estrutura da classificação da despesa definida pela Portaria Interministerial STN/SOF Nº 163/2001 e nem na Lei 4.320/64: foi criada no sistema FIPLAN-RR com o simples propósito de direcionar a execução orçamentária, principalmente no 1º estágio da despesa, criando regras diferenciadas de preenchimento de campos obedecendo aos diferentes tipos de despesa.</td>
+<td>T</td>
+<td>Tipo de Despesa</td>
+	</tr>
+	<tr>
+<td>Classificação Institucional</td>
+<td>TIPO_INSTITUICAO</td>
+<td>Tabela que armazena os tipos de instituição das Unidades Orçamentárias: seu código é equivalente ao 3º dígito do código da Unidade Orçamentária.</td>
+<td>T</td>
+<td>Tipo de Instituição</td>
+	</tr>
+	<tr>
+<td>Classificação Institucional</td>
+<td>TIPO_PODER</td>
+<td>Tabela que armazena os tipos diferenciados para o Poder Executivo. Seu papel seria para permitir a distinção de procedimentos de execução e relacionados com regras diferenças para as UO's que compõem o Ministério Público e Defensoria Pública, que apesar de fazerem parte do Poder Executivo, possuem regras diferenciadas que se aproximam daquelas definidas para os demais Poderes (Legislativo e Judiciário).
+Praticamente, apenas os dois tipos citados - Ministério Público e Defensoria Pública - compõem esta tabela a cada exercício; e diferentemente do que aconteceu com outras tabelas como TIPO_RECURSO e FUNCIONAMENTO_FONTE, que tiveram seus dados "convertidos" em domínios e itens, esta tabela na verdade alimenta um atributo da tabela ORGAO sem ter sido convertido para itens de domínio.
+Ainda assim, foi construída de maneira a permitir a criação de outras estruturas de diferenciação em qualquer uma das esferas de poder.
+</td>
+<td>T</td>
+<td>Tipo de Poder</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>TIPO_RECURSO</td>
+<td>Tabela que armazena os tipos de recurso da fonte. Este tipo é um atributo da tabela FONTE_RECURSO, e possui, além da tabela para armazena os tipos de valores para o campo FLG_TIPO_RECURSO, também o domínio e itens-domínios correspondentes. A tabela foi mantida por haver classes utilizando as duas estruturas, apesar de ambas terem a mesma finalidade.</td>
+<td>T</td>
+<td>Tipo de Recurso da Fonte</td>
+	</tr>
+	<tr>
+<td>Classificação Institucional</td>
+<td>UNIDADE_ADMINISTRATIVA</td>
+<td>Tabela que armazena informações das Unidades Setoriais de Planejamento (USP) do Estado. Até o exercício de 2011, A USP era chamada de Unidade Administrativa (UA), razão pela qual a tabela em referência utiliza nomes de tabela e campos referenciado esta entidade. 
+A USP representa a menor unidade de referência orçamentária do sistema, em nível mais detalhado que o da Unidade Gestora, mas é representado apenas em nível de Plano Anual de Trabalho (PAT), uma que vez que o orçamento é consolidado ao nível de Unidade Gestora, e a Lei Orçamentária Anual (LOA) apresentada ao nível de Unidade Orçamentária.
+</td>
+<td>T</td>
+<td>USP</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>UNIDADE_GESTORA</td>
+<td>Tabela que armazena das Unidades Gestoras das Unidades Orçamentárias do Estado.</td>
+<td>T</td>
+<td>UG</td>
+	</tr>
+	<tr>
+<td>Classificação Institucional</td>
+<td>UNIDADE_GESTORA</td>
+<td>Tabela que armazena das Unidades Gestoras das Unidades Orçamentárias do Estado.</td>
+<td>T</td>
+<td>UG</td>
+	</tr>
+	<tr>
+<td>Plano Anual de Trabalho (PAT)</td>
+<td>UNIDADE_MEDIDA</td>
+<td>Tabela que armazena as unidades de medida das ações planejadas no Orçamento do Estado. Na ciência, unidade de medida é uma medida (ou quantidade) específica de determinada grandeza física usada para servir de padrão para outras medidas. As unidades de medidas de comprimento: milímetros-mm, centímetros-cm, metros-m, quilômetros-km, dentre outras.</td>
+<td>T</td>
+<td>Unidade de Medida</td>
+	</tr>
+	<tr>
+<td>Classificação Institucional</td>
+<td>UNIDADE_ORCAMENTARIA</td>
+<td>Tabela que armazena informações das Unidades Orçamentárias do Estado.</td>
+<td>T</td>
+<td>UO</td>
+	</tr>
+	<tr>
+<td>Classificação Orçamentária - Dotação</td>
+<td>UNIDADE_ORCAMENTARIA</td>
+<td>Tabela que armazena informações das Unidades Orçamentárias do Estado.</td>
+<td>T</td>
+<td>UO</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>USUARIO</td>
+<td>Tabela que armazena informações do Cadastro do Usuário FIPLAN.</td>
+<td>T</td>
+<td>Usuário</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>USUARIO_HORARIO</td>
+<td>Tabela associativa que define os horários de acesso para cada usuário.</td>
+<td>T</td>
+<td>Usuário - Horário</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>USUARIO_PERFIL</td>
+<td>Tabela associativa entre um usuário e seus perfis.</td>
+<td>T</td>
+<td>Usuário - Perfil</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>USUARIO_PROGRAMA_GOVERNO</td>
+<td>Tabela associativa entre o usuário e seus programas de governo. Esta associação permite especiais quais programas de governo estão habilitados a um usuário, por exercício, para lançamento do PAT e PPA.</td>
+<td>T</td>
+<td>Usuário - Programa de Governo</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>USUARIO_UNIDADE_GESTORA</td>
+<td>Tabela associativa entre usuários e suas Unidades Gestoras de acesso: esta tabela identifica quais UG's estão habilitadas para cada usuário, para fins de registro da execução orçamentária e extraorçamentária, da receita e da despesa.</td>
+<td>T</td>
+<td>Usuário - UG</td>
+	</tr>
+	<tr>
+<td>Gestão</td>
+<td>USUARIO_UNIDADE_ORCAMENTARIA</td>
+<td>Tabela associativa entre usuários e suas Unidades Orçamentárias de acesso: esta tabela identifica quais UO's estão habilitadas para cada usuário, para fins de registro da execução orçamentária e extraorçamentária, da receita e da despesa.</td>
+<td>T</td>
+<td>Usuário - UO</td>
+	</tr>
+</tbody></table><!-- SQL:
+SELECT TB71.NOME_SUBMODELO, TB70.NOME_OBJETO, TB70.DESC_OBJETO, TB70.FLAG_TIPO_OBJETO TIPO, TB70.DESC_RESUMIDA
+from ACWTB0070 TB70, ACWTB0071 TB71, ACWTB0073 TB73 
+WHERE tb73.iden_objeto = tb70.iden_objeto AND TB73.IDEN_SUBMODELO = TB71.IDEN_SUBMODELO AND TB70.desc_objeto != 'TABELA REMOVIDA POR INUTILIZAÇÃO.'
+ORDER BY TB70.NOME_OBJETO--></body></html>
